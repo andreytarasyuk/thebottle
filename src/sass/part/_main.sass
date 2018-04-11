@@ -1,0 +1,229 @@
+// main style
+.preview
+	.slider
+		&__item
+			position: relative
+			outline: none
+			+cover
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				width: 100%
+				height: 100%
+				background-color: rgba($black, .6)
+			.name
+				font-size: 10px
+				letter-spacing: .2rem
+				color: $white
+				text-transform: uppercase
+				padding-top: 80px
+				position: relative
+				writing-mode: vertical-lr
+				display: block
+				min-height: 250px
+				&:before
+					content: ""
+					height: 40px
+					width: 1px
+					background-color: $white
+					position: absolute
+					left: 50%
+					top: 0
+					transform: translateX(-50%)
+		&__content
+			padding: 185px 0 170px
+			z-index: 5
+			&-left
+				max-width: 420px
+				float: left
+				p
+					color: $white
+					font-size: $text-reg
+					line-height: 1.5
+					margin-bottom: 50px
+				.btn
+					margin-bottom: 30px
+			&-right
+				position: absolute
+				right: 0
+				top: 30px
+		&-wrapper
+			position: relative
+			+clr
+
+// product 
+.product
+	padding: 80px 0
+	&__item
+		padding: 30px 40px 40px
+		+cover
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background-color: rgba($black, .5)
+		h4
+			margin-bottom: 12px
+		p
+			font-size: $text-xs
+			text-transform: uppercase
+			color: $gray
+			letter-spacing: .2rem
+	&__wrapper
+		position: relative
+		z-index: 5
+		min-height: 230px
+	&__buy
+		font-size: $text-sm
+		font-weight: 700
+		color: $white
+		letter-spacing: .2rem
+		text-transform: uppercase
+		display: inline-block
+		position: absolute
+		right: 0
+		bottom: 0
+
+// popular
+.popular
+	background-color: #f5f5f5
+	padding-bottom: 40px
+	&__item
+		background-color: $white
+		padding: 10px 20px 20px
+		margin-bottom: 40px
+		position: relative
+		box-shadow: 0 0 20px transparent
+		transition: box-shadow .3s linear
+		&:hover
+			box-shadow: 0 0 20px rgba($black, .1)
+		.popular-hearth
+			position: absolute
+			left: 10px
+			top: 10px
+		.popular-block
+			position: absolute
+			top: 0
+			right: 0
+			font-size: 10px
+			color: $white
+			font-weight: 700
+			z-index: 6
+			letter-spacing: .2rem
+			padding: 8px
+			text-transform: uppercase
+			&.popular-orange
+				background-color: #e74c3c
+			&.popular-yellow
+				background-color: #f1c40f
+		.popular-img
+			padding-bottom: 40px
+			position: relative
+			.img
+				text-align: center
+				max-height: 250px
+				min-height: 250px
+		.popular-rate
+			position: absolute
+			bottom: 15px
+			left: 0
+			width: 100%
+			text-align: center
+		.popular-name
+			font-size: $text-reg
+			line-height: 1.25
+			letter-spacing: .01rem
+			font-weight: 700
+			min-height: 40px
+			max-height: 40px
+			overflow: hidden
+			margin-bottom: 15px
+		.popular-categories
+			color: #9ea2a8
+			margin-bottom: 17px
+		.popular-price
+			margin-bottom: 17px
+			font-size: 0
+			span
+				color: $pink
+				font-size: $text-reg
+				letter-spacing: .01rem
+				font-weight: 700
+				display: inline-block
+			.popular-price-old
+				color: $black-lighten
+				position: relative
+				margin-right: 20px
+				&:before
+					content: ""
+					width: 100%
+					height: 2px
+					background-color: $black-lighten
+					position: absolute
+					left: 0
+					top: 9px
+
+// categories
+.categories
+	&__img
+		width: 100%
+		.img
+			+cover
+	&__content
+		padding-top: 60px
+		+clr
+		span
+			display: block
+			margin-bottom: 25px
+			+font-family($exo)
+			font-weight: 700
+			color: $black-lighten
+			font-size: 32px
+		p
+			font-size: $text-reg
+			color: #818181
+			line-height: 1.5
+			margin-bottom: 30px
+	&__item
+		margin-bottom: 80px
+		+clr
+		&:first-child
+			padding: 0 100px 0 40px
+		&:last-child
+			padding: 0 40px 0 160px
+		&-left
+			padding: 0 40px 0 100px
+			.categories__img
+				max-width: 400px
+				float: left
+				.img
+					padding-top: 75%
+			.categories__content
+				margin-left: 400px
+				padding-left: 80px
+				.categories__btn
+					float: right
+		&-right
+			padding: 0 100px 0 100px
+			.categories__img
+				max-width: 340px
+				float: right
+				.img
+					padding-top: 88.23%
+			.categories__content
+				padding-right: 420px 
+				float: left
+				width: 100%
+				margin-right: -340px
+	&__btn
+		letter-spacing: .2rem
+		font-size: $text-xs
+		color: $black-lighten
+		font-weight: 700
+		position: relative

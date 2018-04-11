@@ -1,0 +1,111 @@
+body
+	font-size: $text-sm
+	line-height: 1
+	color: $black-lighten
+	letter-spacing: .025rem
+	+font-family($exo)
+	font-weight: 400
+a
+	text-decoration: none
+p
+	color: $black-lighten
+
+h1,h2,h3,h4,h5,h6
+	font-weight: 700
+	color: $white
+h2
+	font-size: 60px
+	line-height: 1.2
+	font-weight: 700
+	margin-bottom: 25px
+h3
+	font-size: 30px
+	color: $black-lighten
+	+font-family($futuraPT)
+	text-transform: uppercase
+	letter-spacing: .1rem
+	span
+		color: $pink
+h4
+	font-size: 24px
+	line-height: 1.33
+.inner
+	max-width: 1100px
+	min-width: 1100px
+	width: 100%
+	padding: 0 10px
+	margin: 0 auto
+	+clr
+
+
+// slick
+.slick
+	&-dots
+		max-width: 1080px
+		width: 100%
+		left: 50%
+		transform: translateX(-50%)
+		text-align: left
+		bottom: 40px
+		margin-left: -4px
+		button
+			padding: 0
+			width: 10px
+			height: 10px
+			background-color: $white
+			border: 2px solid $black
+			outline: none
+			transition: background-color .3s ease-in-out, border-color .3s ease-in-out
+		li
+			padding: 0 4px
+			&.slick-active
+				button
+					opacity: 1
+					background-color: $black
+					border-color: $white
+
+
+// grid
+.row
+	+clr
+	margin: 0 -20px
+.col
+	float: left
+	padding: 0 20px
+	&-6
+		width: 50%
+	&-3
+		width: 25%
+
+// title
+.title
+	padding: 80px 0
+
+// animation-line
+.animation-line
+	padding-bottom: 6px
+	&:before
+		content: ""
+		width: 100%
+		height: 1px
+		background-color: $pink
+		position: absolute
+		bottom: 0
+		left: 0
+		transform: scale(1, 1)
+		transition: transform .2s linear
+	&:hover
+		&:before
+			transform: scale(0, 1)
+
+// rate
+.rate
+	font-size: 0
+	li
+		display: inline-block
+		&.active
+			.icon-star
+				+sprite($s-icon-star-full)
+		a
+			padding: 0 3px
+			display: inline-block
