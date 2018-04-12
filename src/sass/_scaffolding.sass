@@ -2,13 +2,20 @@ body
 	font-size: $text-sm
 	line-height: 1
 	color: $black-lighten
-	letter-spacing: .025rem
 	+font-family($exo)
 	font-weight: 400
+p,a,span,input,h1,h2,h3,h4,h5,h6
+	letter-spacing: .025em
 a
 	text-decoration: none
 p
 	color: $black-lighten
+button
+	border: none
+	outline: none
+	cursor: pointer
+img
+	max-width: 100%
 
 h1,h2,h3,h4,h5,h6
 	font-weight: 700
@@ -17,13 +24,13 @@ h2
 	font-size: 60px
 	line-height: 1.2
 	font-weight: 700
-	margin-bottom: 25px
+	margin-bottom: 37px
 h3
 	font-size: 30px
 	color: $black-lighten
 	+font-family($futuraPT)
 	text-transform: uppercase
-	letter-spacing: .1rem
+	letter-spacing: .1em
 	span
 		color: $pink
 h4
@@ -31,7 +38,6 @@ h4
 	line-height: 1.33
 .inner
 	max-width: 1100px
-	min-width: 1100px
 	width: 100%
 	padding: 0 10px
 	margin: 0 auto
@@ -76,14 +82,21 @@ h4
 		width: 50%
 	&-3
 		width: 25%
+	&-20
+		width: 20%
+	&-22
+		width: 22%
+	&-18
+		width: 18%
 
 // title
 .title
-	padding: 80px 0
+	padding: 76px 0
 
 // animation-line
 .animation-line
 	padding-bottom: 6px
+	position: relative
 	&:before
 		content: ""
 		width: 100%
@@ -108,4 +121,39 @@ h4
 				+sprite($s-icon-star-full)
 		a
 			padding: 0 3px
+			display: inline-block
+
+// input
+.input
+	&__address
+		position: relative
+		input
+			width: 100%
+			border: none
+			border-bottom: 1px solid $black-lighten
+			padding: 8px 25px 7px 0
+			outline: none
+			color: $black-lighten
+			font-size: $text-xs
+			+placeholder($black-lighten)
+			background-color: transparent
+			+font-family($exo)
+		button
+			font-size: 0
+			padding: 10px 8px
+			position: absolute
+			right: -8px
+			bottom: 0
+			background-color: transparent
+
+// social
+.social
+	font-size: 0
+	margin: 0 -10px
+	li
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 10px
+		a
+			padding: 0 10px
 			display: inline-block

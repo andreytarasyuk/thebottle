@@ -1,5 +1,6 @@
 // main style
 .preview
+	position: relative
 	.slider
 		&__item
 			position: relative
@@ -13,9 +14,9 @@
 				width: 100%
 				height: 100%
 				background-color: rgba($black, .6)
-			.name
+			.label
 				font-size: 10px
-				letter-spacing: .2rem
+				letter-spacing: .3em
 				color: $white
 				text-transform: uppercase
 				padding-top: 80px
@@ -33,7 +34,7 @@
 					top: 0
 					transform: translateX(-50%)
 		&__content
-			padding: 185px 0 170px
+			padding: 185px 0 175px
 			z-index: 5
 			&-left
 				max-width: 420px
@@ -45,15 +46,23 @@
 					margin-bottom: 50px
 				.btn
 					margin-bottom: 30px
-			&-right
-				position: absolute
-				right: 0
-				top: 30px
+		&__label
+			position: absolute
+			right: 0
+			top: 30px
 		&-wrapper
 			position: relative
 			+clr
+	&__btn
+		position: absolute
+		max-width: 1080px
+		width: 100%
+		bottom: 40px
+		left: 50%
+		transform: translateX(-50%)
+		text-align: right
 
-// product 
+// product
 .product
 	padding: 80px 0
 	&__item
@@ -74,7 +83,7 @@
 			font-size: $text-xs
 			text-transform: uppercase
 			color: $gray
-			letter-spacing: .2rem
+			letter-spacing: .2em
 	&__wrapper
 		position: relative
 		z-index: 5
@@ -83,9 +92,10 @@
 		font-size: $text-sm
 		font-weight: 700
 		color: $white
-		letter-spacing: .2rem
+		letter-spacing: .2em
 		text-transform: uppercase
 		display: inline-block
+	&_position
 		position: absolute
 		right: 0
 		bottom: 0
@@ -95,19 +105,32 @@
 	background-color: #f5f5f5
 	padding-bottom: 40px
 	&__item
-		background-color: $white
-		padding: 10px 20px 20px
+		height: 480px
 		margin-bottom: 40px
-		position: relative
-		box-shadow: 0 0 20px transparent
-		transition: box-shadow .3s linear
-		&:hover
-			box-shadow: 0 0 20px rgba($black, .1)
+		.popular-wrapper
+			background-color: $white
+			padding: 10px 20px 20px
+			position: relative
+			box-shadow: 0 0 20px transparent
+			transition: box-shadow .3s linear, transform .3s linear
+			transform: translateY(0)
+			&:hover
+				box-shadow: 0 0 20px rgba($black, .1)
+				transform: translateY(-10px)
+				.popular-rate
+					opacity: 1
+					height: 20px
+				.popular-hearth
+					visibility: visible
+					opacity: 1
 		.popular-hearth
 			position: absolute
 			left: 10px
 			top: 10px
-		.popular-block
+			visibility: hidden
+			opacity: 0
+			transition: visibility .3s linear, opacity .3s linear
+		.popular-sticker
 			position: absolute
 			top: 0
 			right: 0
@@ -115,7 +138,7 @@
 			color: $white
 			font-weight: 700
 			z-index: 6
-			letter-spacing: .2rem
+			letter-spacing: .2em
 			padding: 8px
 			text-transform: uppercase
 			&.popular-orange
@@ -123,37 +146,41 @@
 			&.popular-yellow
 				background-color: #f1c40f
 		.popular-img
-			padding-bottom: 40px
 			position: relative
-			.img
-				text-align: center
+			padding: 0 8px
+			height: 250px
+			margin-bottom: 25px
+			+vertical
+			img
 				max-height: 250px
-				min-height: 250px
+				vertical-align: middle
+				display: inline-block
 		.popular-rate
-			position: absolute
-			bottom: 15px
-			left: 0
-			width: 100%
 			text-align: center
+			height: 0
+			opacity: 0
+			transition: height .3s linear, opacity .3s linear
 		.popular-name
 			font-size: $text-reg
 			line-height: 1.25
-			letter-spacing: .01rem
+			letter-spacing: .01em
 			font-weight: 700
-			min-height: 40px
-			max-height: 40px
+			height: 2.5em
 			overflow: hidden
-			margin-bottom: 15px
+			margin: 15px 0
+			display: inline-block
+			width: 100%
 		.popular-categories
 			color: #9ea2a8
 			margin-bottom: 17px
+			+text-overflow
 		.popular-price
-			margin-bottom: 17px
+			margin-bottom: 16px
 			font-size: 0
 			span
 				color: $pink
 				font-size: $text-reg
-				letter-spacing: .01rem
+				letter-spacing: .01em
 				font-weight: 700
 				display: inline-block
 			.popular-price-old
@@ -200,30 +227,31 @@
 		&-left
 			padding: 0 40px 0 100px
 			.categories__img
-				max-width: 400px
+				max-width: 42.56%
 				float: left
 				.img
 					padding-top: 75%
+			.categories__wrapper
+				margin-left: 42.56%
 			.categories__content
-				margin-left: 400px
 				padding-left: 80px
 				.categories__btn
 					float: right
 		&-right
 			padding: 0 100px 0 100px
 			.categories__img
-				max-width: 340px
+				max-width: 38.64%
 				float: right
 				.img
 					padding-top: 88.23%
-			.categories__content
-				padding-right: 420px 
+			.categories__wrapper
 				float: left
 				width: 100%
-				margin-right: -340px
+				margin-right: -38.64%
+			.categories__content
+				padding-right: 47.72%
 	&__btn
-		letter-spacing: .2rem
+		letter-spacing: .2em
 		font-size: $text-xs
 		color: $black-lighten
 		font-weight: 700
-		position: relative
