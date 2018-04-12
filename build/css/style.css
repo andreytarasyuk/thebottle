@@ -87,7 +87,7 @@ h3 span { color: #b30941; }
 
 h4 { font-size: 24px; line-height: 1.33; }
 
-.inner { max-width: 1100px; width: 100%; padding: 0 10px; margin: 0 auto; }
+.inner { max-width: 1100px; min-width: 1100px; width: 100%; padding: 0 10px; margin: 0 auto; }
 .inner:after { content: ""; display: table; clear: both; }
 
 .slick-dots { max-width: 1080px; width: 100%; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); text-align: left; bottom: 40px; margin-left: -4px; }
@@ -164,24 +164,25 @@ h4 { font-size: 24px; line-height: 1.33; }
 
 .popular { background-color: #f5f5f5; padding-bottom: 40px; }
 .popular__item { height: 480px; margin-bottom: 40px; }
-.popular__item .popular-wrapper { background-color: #fff; padding: 10px 20px 20px; position: relative; box-shadow: 0 0 20px transparent; transition: box-shadow 0.3s linear, -webkit-transform 0.3s linear; transition: box-shadow 0.3s linear, transform 0.3s linear; transition: box-shadow 0.3s linear, transform 0.3s linear, -webkit-transform 0.3s linear; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
-.popular__item .popular-wrapper:hover { box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); -webkit-transform: translateY(-10px); -ms-transform: translateY(-10px); transform: translateY(-10px); }
-.popular__item .popular-wrapper:hover .popular-rate { opacity: 1; height: 20px; }
-.popular__item .popular-wrapper:hover .popular-hearth { visibility: visible; opacity: 1; }
-.popular__item .popular-hearth { position: absolute; left: 10px; top: 10px; visibility: hidden; opacity: 0; transition: visibility 0.3s linear, opacity 0.3s linear; }
-.popular__item .popular-sticker { position: absolute; top: 0; right: 0; font-size: 10px; color: #fff; font-weight: 700; z-index: 6; letter-spacing: 0.2em; padding: 8px; text-transform: uppercase; }
-.popular__item .popular-sticker.popular-orange { background-color: #e74c3c; }
-.popular__item .popular-sticker.popular-yellow { background-color: #f1c40f; }
-.popular__item .popular-img { position: relative; padding: 0 8px; height: 250px; margin-bottom: 25px; font-size: 0; text-align: center; }
-.popular__item .popular-img:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.popular__item .popular-img img { max-height: 250px; vertical-align: middle; display: inline-block; }
-.popular__item .popular-rate { text-align: center; height: 0; opacity: 0; transition: height 0.3s linear, opacity 0.3s linear; }
-.popular__item .popular-name { font-size: 16px; line-height: 1.25; letter-spacing: 0.01em; font-weight: 700; height: 2.5em; overflow: hidden; margin: 15px 0; display: inline-block; width: 100%; }
-.popular__item .popular-categories { color: #9ea2a8; margin-bottom: 17px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.popular__item .popular-price { margin-bottom: 16px; font-size: 0; }
-.popular__item .popular-price span { color: #b30941; font-size: 16px; letter-spacing: 0.01em; font-weight: 700; display: inline-block; }
-.popular__item .popular-price .popular-price-old { color: #000714; position: relative; margin-right: 20px; }
-.popular__item .popular-price .popular-price-old:before { content: ""; width: 100%; height: 2px; background-color: #000714; position: absolute; left: 0; top: 9px; }
+.popular__wrapper { background-color: #fff; padding: 10px 20px 20px; position: relative; box-shadow: 0 0 20px transparent; transition: box-shadow 0.3s linear, -webkit-transform 0.3s linear; transition: box-shadow 0.3s linear, transform 0.3s linear; transition: box-shadow 0.3s linear, transform 0.3s linear, -webkit-transform 0.3s linear; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+.popular__wrapper:hover { box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); -webkit-transform: translateY(-10px); -ms-transform: translateY(-10px); transform: translateY(-10px); }
+.popular__wrapper:hover .popular__rate { opacity: 1; height: 20px; }
+.popular__wrapper:hover .popular__hearth { visibility: visible; opacity: 1; }
+.popular__hearth { position: absolute; left: 10px; top: 10px; visibility: hidden; opacity: 0; transition: visibility 0.3s linear, opacity 0.3s linear; }
+.popular__sticker { position: absolute; top: 0; right: 0; font-size: 10px; color: #fff; font-weight: 700; z-index: 6; letter-spacing: 0.2em; padding: 8px; text-transform: uppercase; }
+.popular__sticker_orange { background-color: #e74c3c; }
+.popular__sticker_yellow { background-color: #f1c40f; }
+.popular__img { position: relative; padding: 0 8px; height: 250px; margin-bottom: 25px; font-size: 0; text-align: center; }
+.popular__img:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.popular__img img { max-height: 250px; vertical-align: middle; display: inline-block; }
+.popular__rate { text-align: center; height: 0; opacity: 0; transition: height 0.3s linear, opacity 0.3s linear; }
+.popular__name { font-size: 16px; line-height: 1.25; letter-spacing: 0.01em; font-weight: 700; height: 2.5em; overflow: hidden; margin: 15px 0; display: inline-block; width: 100%; }
+.popular__categories { color: #9ea2a8; margin-bottom: 17px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.popular__price { margin-bottom: 16px; font-size: 0; }
+.popular__price span { font-size: 16px; letter-spacing: 0.01em; font-weight: 700; display: inline-block; }
+.popular__price_default { color: #b30941; }
+.popular__price_old { color: #000714; position: relative; margin-right: 20px; }
+.popular__price_old:before { content: ""; width: 100%; height: 2px; background-color: #000714; position: absolute; left: 0; top: 9px; }
 
 .categories__img { width: 100%; }
 .categories__img .img { background-position: center center; background-repeat: no-repeat; background-size: cover; }

@@ -107,94 +107,95 @@
 	&__item
 		height: 480px
 		margin-bottom: 40px
-		.popular-wrapper
-			background-color: $white
-			padding: 10px 20px 20px
-			position: relative
-			box-shadow: 0 0 20px transparent
-			transition: box-shadow .3s linear, transform .3s linear
-			transform: translateY(0)
-			&:hover
-				box-shadow: 0 0 20px rgba($black, .1)
-				transform: translateY(-10px)
-				.popular-rate
-					opacity: 1
-					height: 20px
-				.popular-hearth
-					visibility: visible
-					opacity: 1
-		.popular-hearth
-			position: absolute
-			left: 10px
-			top: 10px
-			visibility: hidden
-			opacity: 0
-			transition: visibility .3s linear, opacity .3s linear
-		.popular-sticker
-			position: absolute
-			top: 0
-			right: 0
-			font-size: 10px
-			color: $white
-			font-weight: 700
-			z-index: 6
-			letter-spacing: .2em
-			padding: 8px
-			text-transform: uppercase
-			&.popular-orange
-				background-color: #e74c3c
-			&.popular-yellow
-				background-color: #f1c40f
-		.popular-img
-			position: relative
-			padding: 0 8px
-			height: 250px
-			margin-bottom: 25px
-			+vertical
-			img
-				max-height: 250px
-				vertical-align: middle
-				display: inline-block
-		.popular-rate
-			text-align: center
-			height: 0
-			opacity: 0
-			transition: height .3s linear, opacity .3s linear
-		.popular-name
+	&__wrapper
+		background-color: $white
+		padding: 10px 20px 20px
+		position: relative
+		box-shadow: 0 0 20px transparent
+		transition: box-shadow .3s linear, transform .3s linear
+		transform: translateY(0)
+		&:hover
+			box-shadow: 0 0 20px rgba($black, .1)
+			transform: translateY(-10px)
+			.popular__rate
+				opacity: 1
+				height: 20px
+			.popular__hearth
+				visibility: visible
+				opacity: 1
+	&__hearth
+		position: absolute
+		left: 10px
+		top: 10px
+		visibility: hidden
+		opacity: 0
+		transition: visibility .3s linear, opacity .3s linear
+	&__sticker
+		position: absolute
+		top: 0
+		right: 0
+		font-size: 10px
+		color: $white
+		font-weight: 700
+		z-index: 6
+		letter-spacing: .2em
+		padding: 8px
+		text-transform: uppercase
+		&_orange
+			background-color: #e74c3c
+		&_yellow
+			background-color: #f1c40f
+	&__img
+		position: relative
+		padding: 0 8px
+		height: 250px
+		margin-bottom: 25px
+		+vertical
+		img
+			max-height: 250px
+			vertical-align: middle
+			display: inline-block
+	&__rate
+		text-align: center
+		height: 0
+		opacity: 0
+		transition: height .3s linear, opacity .3s linear
+	&__name
+		font-size: $text-reg
+		line-height: 1.25
+		letter-spacing: .01em
+		font-weight: 700
+		height: 2.5em
+		overflow: hidden
+		margin: 15px 0
+		display: inline-block
+		width: 100%
+	&__categories
+		color: #9ea2a8
+		margin-bottom: 17px
+		+text-overflow
+	&__price
+		margin-bottom: 16px
+		font-size: 0
+		span
 			font-size: $text-reg
-			line-height: 1.25
 			letter-spacing: .01em
 			font-weight: 700
-			height: 2.5em
-			overflow: hidden
-			margin: 15px 0
 			display: inline-block
-			width: 100%
-		.popular-categories
-			color: #9ea2a8
-			margin-bottom: 17px
-			+text-overflow
-		.popular-price
-			margin-bottom: 16px
-			font-size: 0
-			span
-				color: $pink
-				font-size: $text-reg
-				letter-spacing: .01em
-				font-weight: 700
-				display: inline-block
-			.popular-price-old
-				color: $black-lighten
-				position: relative
-				margin-right: 20px
-				&:before
-					content: ""
-					width: 100%
-					height: 2px
-					background-color: $black-lighten
-					position: absolute
-					left: 0
-					top: 9px
+		&_default
+			color: $pink
+		&_old
+			color: $black-lighten
+			position: relative
+			margin-right: 20px
+			&:before
+				content: ""
+				width: 100%
+				height: 2px
+				background-color: $black-lighten
+				position: absolute
+				left: 0
+				top: 9px
 
 // categories
 .categories
