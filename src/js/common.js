@@ -8,6 +8,7 @@ $(document).ready(function() {
 		draggable: false,
 		fade: true,
 		dots: true,
+		appendDots:$('.js-slick-dots'),
 		arrows: false
 	});
 

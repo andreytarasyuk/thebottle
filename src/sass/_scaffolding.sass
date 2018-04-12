@@ -48,13 +48,6 @@ h4
 // slick
 .slick
 	&-dots
-		max-width: 1080px
-		width: 100%
-		left: 50%
-		transform: translateX(-50%)
-		text-align: left
-		bottom: 40px
-		margin-left: -4px
 		button
 			padding: 0
 			width: 10px
@@ -158,17 +151,40 @@ h4
 			padding: 0 10px
 			display: inline-block
 
-// login
-.login
-	display: inline-block
-	font-size: 0
-	span,
-	.icon
-		display: inline-block
-		vertical-align: middle
-	span
-		color: $black-lighten
-		font-size: $text-sm
-		margin-right: 38px
-		letter-spacing: .20rem
-		font-weight: 700
+
+// menu
+.menu
+	padding: 20px 0
+
+// dropdown
+.dropdown
+	width: 160px
+	padding: 10px
+	border-radius: 3px
+	box-shadow: 0 -3px 5px rgba($black, .1)
+	position: absolute
+	left: 50%
+	top: 100%
+	transform: translateX(-50%)
+	z-index: 99999
+	background-color: $white
+	text-align: center
+	&:before
+		content: ""
+		position: absolute
+		bottom: 100%
+		left: 50%
+		margin-left: -5px
+		+arr(10, 5, $white, t)
+	li
+		a
+			padding: 8px 0
+			letter-spacing: .2em
+			font-size: 10px
+			display: block
+			font-weight: 700
+			color: $black-lighten
+			text-transform: uppercase
+			transition: color .3s linear
+			&:hover
+				color: $pink

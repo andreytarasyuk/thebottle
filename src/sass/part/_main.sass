@@ -8,8 +8,16 @@
 		bottom: 40px
 		left: 50%
 		transform: translateX(-50%)
-		text-align: right
-
+		+clr
+	.slick
+		&-dots
+			float: left
+			position: relative
+			font-size: 0
+			padding-top: 3px
+	.btn
+		&_next
+			float: right
 .slider
 	&__item
 		position: relative
@@ -276,3 +284,40 @@
 				color: $black-lighten
 	&__input
 		margin-top: -10px
+
+.simple-item
+	position: relative
+	cursor: pointer
+	&:hover
+		.simple-item__title
+			span
+				color: $pink
+		.icon-alcohol
+			+sprite($s-icon-strong-alcohol-active)
+		.icon-liqueurs
+			+sprite($s-icon-liqueurs-active)
+		.icon-wine
+			+sprite($s-icon-wine-active)
+		.icon-vermouth
+			+sprite($s-icon-vermouth-active)
+		.simple-item__dropdown
+			visibility: visible
+			opacity: 1
+	&__title
+		font-size: 0
+		display: flex
+		align-items: center
+		+clr
+		span
+			font-size: $text-xs
+			color: $black-lighten
+			font-weight: 700
+			letter-spacing: .2em
+			line-height: 1.5
+			padding: 0 10px 0 40px
+			text-transform: uppercase
+	&__dropdown
+		margin-top: 10px
+		visibility: hidden
+		opacity: 0
+		transition: opacity .4s linear, visibility .4s linear
