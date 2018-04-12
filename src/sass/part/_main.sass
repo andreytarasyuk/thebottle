@@ -1,58 +1,6 @@
 // main style
 .preview
 	position: relative
-	.slider
-		&__item
-			position: relative
-			outline: none
-			+cover
-			&:before
-				content: ""
-				position: absolute
-				left: 0
-				top: 0
-				width: 100%
-				height: 100%
-				background-color: rgba($black, .6)
-			.label
-				font-size: 10px
-				letter-spacing: .3em
-				color: $white
-				text-transform: uppercase
-				padding-top: 80px
-				position: relative
-				writing-mode: vertical-lr
-				display: block
-				min-height: 250px
-				&:before
-					content: ""
-					height: 40px
-					width: 1px
-					background-color: $white
-					position: absolute
-					left: 50%
-					top: 0
-					transform: translateX(-50%)
-		&__content
-			padding: 185px 0 175px
-			z-index: 5
-			&-left
-				max-width: 420px
-				float: left
-				p
-					color: $white
-					font-size: $text-reg
-					line-height: 1.5
-					margin-bottom: 50px
-				.btn
-					margin-bottom: 30px
-		&__label
-			position: absolute
-			right: 0
-			top: 30px
-		&-wrapper
-			position: relative
-			+clr
 	&__btn
 		position: absolute
 		max-width: 1080px
@@ -62,13 +10,11 @@
 		transform: translateX(-50%)
 		text-align: right
 
-// product
-.product
-	padding: 80px 0
+.slider
 	&__item
-		padding: 30px 40px 40px
-		+cover
 		position: relative
+		outline: none
+		+cover
 		&:before
 			content: ""
 			position: absolute
@@ -76,14 +22,71 @@
 			top: 0
 			width: 100%
 			height: 100%
-			background-color: rgba($black, .5)
-		h4
-			margin-bottom: 12px
-		p
-			font-size: $text-xs
+			background-color: rgba($black, .6)
+		.label
+			font-size: 10px
+			letter-spacing: .3em
+			color: $white
 			text-transform: uppercase
-			color: $gray
-			letter-spacing: .2em
+			padding-top: 80px
+			position: relative
+			writing-mode: vertical-lr
+			display: block
+			min-height: 250px
+			&:before
+				content: ""
+				height: 40px
+				width: 1px
+				background-color: $white
+				position: absolute
+				left: 50%
+				top: 0
+				transform: translateX(-50%)
+	&__content
+		padding: 185px 0 175px
+		z-index: 5
+		&_left
+			max-width: 420px
+			float: left
+			p
+				color: $white
+				font-size: $text-reg
+				line-height: 1.5
+				margin-bottom: 50px
+			.btn
+				margin-bottom: 30px
+	&__label
+		position: absolute
+		right: 0
+		top: 30px
+	&__wrapper
+		position: relative
+		+clr
+
+// product
+.product
+	padding: 80px 0
+
+// banner
+.banner
+	padding: 30px 40px 40px
+	+cover
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba($black, .5)
+	h4
+		margin-bottom: 12px
+	p
+		font-size: $text-xs
+		text-transform: uppercase
+		color: $gray
+		letter-spacing: .2em
 	&__wrapper
 		position: relative
 		z-index: 5
@@ -104,9 +107,11 @@
 .popular
 	background-color: #f5f5f5
 	padding-bottom: 40px
-	&__item
-		height: 480px
-		margin-bottom: 40px
+
+// item
+.item
+	height: 480px
+	margin-bottom: 40px
 	&__wrapper
 		background-color: $white
 		padding: 10px 20px 20px
@@ -117,10 +122,10 @@
 		&:hover
 			box-shadow: 0 0 20px rgba($black, .1)
 			transform: translateY(-10px)
-			.popular__rate
+			.item__rate
 				opacity: 1
 				height: 20px
-			.popular__hearth
+			.item__hearth
 				visibility: visible
 				opacity: 1
 	&__hearth
@@ -197,8 +202,14 @@
 				left: 0
 				top: 9px
 
-// categories
-.categories
+// box
+.box
+	margin-bottom: 80px
+	+clr
+	&:first-child
+		padding: 0 100px 0 40px
+	&:last-child
+		padding: 0 40px 0 160px
 	&__img
 		width: 100%
 		.img
@@ -218,41 +229,50 @@
 			color: #818181
 			line-height: 1.5
 			margin-bottom: 30px
-	&__item
-		margin-bottom: 80px
-		+clr
-		&:first-child
-			padding: 0 100px 0 40px
-		&:last-child
-			padding: 0 40px 0 160px
-		&-left
-			padding: 0 40px 0 100px
-			.categories__img
-				max-width: 42.56%
-				float: left
-				.img
-					padding-top: 75%
-			.categories__wrapper
-				margin-left: 42.56%
-			.categories__content
-				padding-left: 80px
-				.categories__btn
-					float: right
-		&-right
-			padding: 0 100px 0 100px
-			.categories__img
-				max-width: 38.64%
+	&_left
+		padding: 0 40px 0 100px
+		.box__img
+			max-width: 42.56%
+			float: left
+			.img
+				padding-top: 75%
+		.box__wrapper
+			margin-left: 42.56%
+		.box__content
+			padding-left: 80px
+			.box__btn
 				float: right
-				.img
-					padding-top: 88.23%
-			.categories__wrapper
-				float: left
-				width: 100%
-				margin-right: -38.64%
-			.categories__content
-				padding-right: 47.72%
+	&_right
+		padding: 0 100px 0 100px
+		.box__img
+			max-width: 38.64%
+			float: right
+			.img
+				padding-top: 88.23%
+		.box__wrapper
+			float: left
+			width: 100%
+			margin-right: -38.64%
+		.box__content
+			padding-right: 47.72%
 	&__btn
 		letter-spacing: .2em
 		font-size: $text-xs
 		color: $black-lighten
 		font-weight: 700
+
+.sm-item
+	&__title
+		letter-spacing: .2em
+		color: $pink
+		font-weight: 700
+		text-transform: uppercase
+		font-size: $text-xs
+		margin-bottom: 25px
+	&__list
+		li
+			margin-bottom: 14px
+			a
+				color: $black-lighten
+	&__input
+		margin-top: -10px
