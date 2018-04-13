@@ -18,6 +18,39 @@
 	.btn
 		&_next
 			float: right
+.preview-category
+	+cover
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba($black, .6)
+	&__wrapper
+		+gr($black, rgba($black, .0))
+	&__content
+		position: relative
+		z-index: 5
+		min-height: 320px
+		&_center
+			text-align: center
+	&__title
+		max-width: 400px
+		display: inline-block
+		padding: 124px 0
+		h2
+			margin-bottom: 0
+		p
+			font-size: $text-reg
+			line-height: 1.5
+			padding: 40px 0
+			color: $white
+	&__breadcrumbs
+		position: absolute
+		right: 0
+		bottom: 35px
 .slider
 	&__item
 		position: relative
@@ -270,6 +303,8 @@
 		font-weight: 700
 
 .sm-item
+	&_indent
+		padding-left: 15px
 	&__title
 		letter-spacing: .2em
 		color: $pink
@@ -321,3 +356,204 @@
 		visibility: hidden
 		opacity: 0
 		transition: opacity .4s linear, visibility .4s linear
+
+// basket
+.basket
+	height: 100%
+	position: relative
+	&__title
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		+clr
+		p
+			float: left
+			font-weight: 700
+			text-transform: uppercase
+			font-size: $text-xs
+			letter-spacing: .2em
+			padding: 2px 0 2px 65px
+	&__close
+		float: right
+		font-size: 0
+	&__bottom
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+	&__btn
+		.btn
+			&:not(:last-child)
+				margin-bottom: 20px
+	&__price
+		margin-bottom: 20px
+		+clr
+		span
+			font-weight: 700
+		&_left
+			float: left
+			span
+				font-size: $text-xs
+				letter-spacing: .2em
+				text-transform: uppercase
+		&_right
+			float: right
+			span
+				font-size: $text-sm
+				letter-spacing: .01em
+				color: $pink
+	&__scroll
+		padding: 70px 0 160px
+		height: 100%
+	&__item
+		overflow: auto
+		height: 100%
+
+// row-item
+.row-item
+	padding: 20px 0
+	+clr
+	&:not(:last-child)
+		border-bottom: 1px solid #f5f5f5
+	&__img
+		width: 80px
+		height: 160px
+		overflow: hidden
+		float: left
+		+vertical
+		img
+			max-height: 160px
+	&__content
+		margin-left: 80px
+		padding: 5px 0 0 20px
+	&__title
+		font-size: $text-sm
+		font-weight: 700
+		letter-spacing: .01em
+		line-height: 1.28
+		height: 2.572em
+		overflow: hidden
+		margin-bottom: 15px
+	&__category
+		letter-spacing: .025em
+		color: #9ea2a8
+		+text-overflow
+		margin-bottom: 20px
+	&__quantity
+		display: inline-block
+		width: 100%
+		margin-bottom: 20px
+		+clr
+		span
+			display: inline-block
+			padding-top: 8px
+	&__select
+		float: right
+		.select
+			background-color: #f5f5f5
+			border: none
+			+font-family($exo)
+			padding: 6px 15px
+			outline: none
+			cursor: pointer
+			border-radius: 2px
+	&__price
+		color: $pink
+		font-weight: 700
+		letter-spacing: .01em
+
+// col-items
+.col-items
+	text-align: center
+	padding: 80px 0 40px
+	.row
+		font-size: 0
+.col-item
+	display: inline-block
+	width: 50%
+	vertical-align: top
+	padding: 0 20px
+	text-align: left
+	margin-bottom: 40px
+	&__wrapper
+		background-color: #f5f5f5
+		transition: background .3s linear
+		padding: 40px
+		+clr
+		&:hover
+			background-color: $pink
+			.col-item__title,
+			.col-item__btn,
+			p
+				color: $white
+			.col-item__btn:before
+				background-color: $black-lighten
+	&__title,
+	&__btn,
+	p
+		transition: color .3s linear
+	&__img
+		float: left
+		width: 80px
+		height: 180px
+		+vertical
+		img
+			max-height: 180px
+	&__content
+		margin-left: 80px
+		padding-left: 30px
+		position: relative
+		height: 180px
+	&__title
+		font-size: 36px
+		line-height: 0.89
+		font-weight: 700
+		margin-bottom: 24px
+	p
+		font-size: $text-sm
+		line-height: 1.43
+		color: #818181
+		overflow: hidden
+		height: 5.715em
+	&__btn
+		font-size: $text-xs
+		letter-spacing: .2em
+		font-weight: 700
+		color: $black-lighten
+		text-transform: uppercase
+		&_position
+			position: absolute
+			right: 0
+			bottom: 5px
+
+// subcategory
+.subcategory
+	overflow: hidden
+	&_right
+		padding: 80px 0
+	.item__wrapper
+		box-shadow: 0 0 20px rgba(0,0,0,.1)
+// main-item
+.main-item
+	margin-bottom: 20px
+	border-bottom: 1px solid $white
+	&__title
+		margin-bottom: 20px
+		a
+			text-transform: uppercase
+			letter-spacing: .2em
+			font-size: $text-xs
+			font-weight: 700
+			color: $black-lighten
+	&__checkboxes
+		padding-bottom: 10px
+	&__btn
+		a
+			color: #9ea2a8
+			&:after
+				content: ""
+				position: absolute
+				+arr(8, 4, #9ea2a8, b)
+				left: 6px
+				top: 11px
