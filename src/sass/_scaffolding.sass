@@ -145,20 +145,34 @@ h4
 				padding: 0 5px
 
 // input
+.textarea
+	height: 140px
+	padding: 10px 20px
+	resize: none
+.input,
+.textarea
+	font-size: $text-reg
+	letter-spacing: .025em
+	color: $black-lighten
+	outline: none
+	+font-family($exo)
+	+placeholder($black-lighten)
+	max-width: 420px
+	width: 100%
+	border: 1px solid $black-lighten
+	background-color: #f5f5f5
 .input
+	height: 50px
+	padding: 5px 20px
 	&__address
 		position: relative
-		input
-			width: 100%
+		.input
 			border: none
 			border-bottom: 1px solid $black-lighten
 			padding: 8px 25px 7px 0
-			outline: none
-			color: $black-lighten
 			font-size: $text-xs
-			+placeholder($black-lighten)
 			background-color: transparent
-			+font-family($exo)
+			height: auto
 		button
 			font-size: 0
 			padding: 10px 8px
@@ -501,23 +515,3 @@ input[type="radio"]
 		&.active
 			display: block
 
-// input
-.input
-	height: 50px
-	padding: 5px 20px
-.textarea
-	height: 140px
-	padding: 10px 20px
-	resize: none
-.input,
-.textarea
-	font-size: $text-reg
-	letter-spacing: .025em
-	color: $black-lighten
-	outline: none
-	+font-family($exo)
-	+placeholder($black-lighten)
-	max-width: 420px
-	width: 100%
-	border: 1px solid $black-lighten
-	background-color: #f5f5f5
