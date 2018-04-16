@@ -19,7 +19,7 @@ title: subcategory
 						<ul class="breadcrumbs preview-category__breadcrumbs">
 							<li><a href="#">Главная</a></li>
 							<li><a href="#">Крепкие напитки</a></li>
-							<li class="active"><a href="#">Виски</a></li>
+							<li class="current"><a href="#">Виски</a></li>
 						</ul>
 					</div>
 				</div>
@@ -34,80 +34,125 @@ title: subcategory
 					<div class="col col-3">
 						<aside class="aside">
 							<div class="aside__title">Выбрать виски</div>
-							<div class="main-item">
-								<div class="main-item__title"><a href="#">Объем</a></div>
-								<div class="main-item__checkboxes">
+							<div class="filter">
+								<div class="filter__title"><a href="#">Объем</a></div>
+								<div class="filter__checkboxes">
 									<div class="checkbox">
-										<input type="radio" name="amount" id="isActive_0">
-										<label for="isActive_0">Все объемы</label>
+										<label>
+											<input type="radio" name="amount">
+											<span class="checkbox__text">Все объемы</span>
+											<span class="checkbox__icon"></span>
+										</label>
 									</div>
 									<div class="checkbox">
-										<input type="radio" name="amount" id="isActive_1">
-										<label for="isActive_1">0.75 л</label>
+										<label>
+											<input type="radio" name="amount">
+											<span class="checkbox__text">0.5 л</span>
+											<span class="checkbox__icon"></span>
+										</label>
 									</div>
 									<div class="checkbox">
-										<input type="radio" name="amount" id="isActive_2">
-										<label for="isActive_2">1 л</label>
+										<label>
+											<input type="radio" name="amount">
+											<span class="checkbox__text">0.75 л</span>
+											<span class="checkbox__icon"></span>
+										</label>
 									</div>
 									<div class="checkbox">
-										<input type="radio" name="amount" id="isActive_3">
-										<label for="isActive_3">0.5 л</label>
+										<label>
+											<input type="radio" name="amount">
+											<span class="checkbox__text">1 л</span>
+											<span class="checkbox__icon"></span>
+										</label>
 									</div>
-									<div class="main-item__btn">
-										<a href="#">Ещё</a>
+									<div class="filter__btn">
+										<a href="#">
+											<span class="filter__icon"></span>
+											<span class="filter__text">Ещё</span>
+										</a>
 									</div>
 								</div>
 							</div>
-							<div class="main-item">
-								<div class="main-item__title"><a href="#">вкус</a></div>
-								<div class="main-item__checkboxes">
+							<div class="filter">
+								<div class="filter__title"><a href="#">вкус</a></div>
+								<div class="filter__checkboxes">
 									<div class="checkbox">
-										<input type="radio" name="amount" id="isActive_4">
-										<label for="isActive_4">Все вкусы</label>
+										<label>
+											<input type="radio" name="amount1">
+											<span class="checkbox__text">Все вкусы</span>
+											<span class="checkbox__icon"></span>
+										</label>
 									</div>
 									<div class="checkbox">
-										<input type="radio" name="amount" id="isActive_5">
-										<label for="isActive_5">Вишня<span>12</span></label>
+										<label>
+											<input type="radio" name="amount1">
+											<span class="checkbox__text">Вишня<span>12</span></span>
+											<span class="checkbox__icon"></span>
+										</label>
 									</div>
 									<div class="checkbox">
-										<input type="radio" name="amount" id="isActive_6">
-										<label for="isActive_6">Шоколад</label>
+										<label>
+											<input type="radio" name="amount1">
+											<span class="checkbox__text">Шоколад</span>
+											<span class="checkbox__icon"></span>
+										</label>
 									</div>
 									<div class="checkbox">
-										<input type="radio" name="amount" id="isActive_7">
-										<label for="isActive_7">Яблоко</label>
+										<label>
+											<input type="radio" name="amount1">
+											<span class="checkbox__text">Яблоко</span>
+											<span class="checkbox__icon"></span>
+										</label>
 									</div>
-									<div class="main-item__btn">
-										<a href="#">Ещё</a>
+									<div class="filter__btn">
+										<a href="#">
+											<span class="filter__icon"></span>
+											<span class="filter__text">Ещё</span>
+										</a>
 									</div>
 								</div>
 							</div>
-							<div class="main-item">
-								<div class="main-item__title"><a href="#">тип</a></div>
-								<div class="main-item__checkboxes">
+							<div class="filter">
+								<div class="filter__title"><a href="#">тип</a></div>
+								<div class="filter__checkboxes">
 									<div class="checkbox">
-										<input type="radio" name="amount" id="isActive_8">
-										<label for="isActive_8">Любой тип виски</label>
+										<label>
+											<input type="radio" name="amount2">
+											<span class="checkbox__text">Любой тип виски</span>
+											<span class="checkbox__icon"></span>
+										</label>
 									</div>
 									<div class="checkbox">
-										<input type="radio" name="amount" id="isActive_9">
-										<label for="isActive_9">Односолодовый</label>
+										<label>
+											<input type="radio" name="amount2">
+											<span class="checkbox__text">Односолодовый</span>
+											<span class="checkbox__icon"></span>
+										</label>
 									</div>
 									<div class="checkbox">
-										<input type="radio" name="amount" id="isActive_10">
-										<label for="isActive_10">Купажированный</label>
+										<label>
+											<input type="radio" name="amount2">
+											<span class="checkbox__text">Купажированный</span>
+											<span class="checkbox__icon"></span>
+										</label>
 									</div>
 									<div class="checkbox">
-										<input type="radio" name="amount" id="isActive_11">
-										<label for="isActive_11">Бурбон</label>
+										<label>
+											<input type="radio" name="amount2">
+											<span class="checkbox__text">Бурбон</span>
+											<span class="checkbox__icon"></span>
+										</label>
 									</div>
-									<div class="main-item__btn">
-										<a href="#">Ещё</a>
+									<div class="filter__btn">
+										<a href="#">
+											<span class="filter__icon"></span>
+											<span class="filter__text">Ещё</span>
+										</a>
 									</div>
 								</div>
 							</div>
-							<div class="main-item">
-								<div class="main-item__title"><a href="#">сочетание</a></div>
+							<div class="filter">
+								<div class="filter__title"><a href="#">сочетание</a></div>
 							</div>
 						</aside>
 					</div>
@@ -145,7 +190,7 @@ title: subcategory
 											<div class="item__categories">Ликер</div>
 											<div class="item__price"><span class="item__price_default">510 грн</span></div>
 											<div class="item__btn">
-												<a href="#" class="btn btn_block btn_small"><i class="icon icon-basket"></i><span>в корзину</span></a>
+												<a href="#" class="btn btn_block btn_small btn_icon"><i class="icon icon-basket"></i><span>в корзину</span></a>
 											</div>
 										</div>
 									</div>
@@ -170,7 +215,7 @@ title: subcategory
 											<div class="item__categories">Ликер</div>
 											<div class="item__price"><span class="item__price_default">510 грн</span></div>
 											<div class="item__btn">
-												<a href="#" class="btn btn_block btn_small"><i class="icon icon-basket"></i><span>в корзину</span></a>
+												<a href="#" class="btn btn_block btn_small btn_icon"><i class="icon icon-basket"></i><span>в корзину</span></a>
 											</div>
 										</div>
 									</div>
@@ -195,7 +240,7 @@ title: subcategory
 											<div class="item__categories">Ликер</div>
 											<div class="item__price"><span class="item__price_default">510 грн</span></div>
 											<div class="item__btn">
-												<a href="#" class="btn btn_block btn_small"><i class="icon icon-basket"></i><span>в корзину</span></a>
+												<a href="#" class="btn btn_block btn_small btn_icon"><i class="icon icon-basket"></i><span>в корзину</span></a>
 											</div>
 										</div>
 									</div>
@@ -220,7 +265,7 @@ title: subcategory
 											<div class="item__categories">Ликер</div>
 											<div class="item__price"><span class="item__price_default">510 грн</span></div>
 											<div class="item__btn">
-												<a href="#" class="btn btn_block btn_small"><i class="icon icon-basket"></i><span>в корзину</span></a>
+												<a href="#" class="btn btn_block btn_small btn_icon"><i class="icon icon-basket"></i><span>в корзину</span></a>
 											</div>
 										</div>
 									</div>
@@ -245,7 +290,7 @@ title: subcategory
 											<div class="item__categories">Ликер</div>
 											<div class="item__price"><span class="item__price_default">510 грн</span></div>
 											<div class="item__btn">
-												<a href="#" class="btn btn_block btn_small"><i class="icon icon-basket"></i><span>в корзину</span></a>
+												<a href="#" class="btn btn_block btn_small btn_icon"><i class="icon icon-basket"></i><span>в корзину</span></a>
 											</div>
 										</div>
 									</div>
@@ -270,7 +315,7 @@ title: subcategory
 											<div class="item__categories">Ликер</div>
 											<div class="item__price"><span class="item__price_default">510 грн</span></div>
 											<div class="item__btn">
-												<a href="#" class="btn btn_block btn_small"><i class="icon icon-basket"></i><span>в корзину</span></a>
+												<a href="#" class="btn btn_block btn_small btn_icon"><i class="icon icon-basket"></i><span>в корзину</span></a>
 											</div>
 										</div>
 									</div>
@@ -295,7 +340,7 @@ title: subcategory
 											<div class="item__categories">Ликер</div>
 											<div class="item__price"><span class="item__price_default">510 грн</span></div>
 											<div class="item__btn">
-												<a href="#" class="btn btn_block btn_small"><i class="icon icon-basket"></i><span>в корзину</span></a>
+												<a href="#" class="btn btn_block btn_small btn_icon"><i class="icon icon-basket"></i><span>в корзину</span></a>
 											</div>
 										</div>
 									</div>
@@ -320,7 +365,7 @@ title: subcategory
 											<div class="item__categories">Ликер</div>
 											<div class="item__price"><span class="item__price_default">510 грн</span></div>
 											<div class="item__btn">
-												<a href="#" class="btn btn_block btn_small"><i class="icon icon-basket"></i><span>в корзину</span></a>
+												<a href="#" class="btn btn_block btn_small btn_icon"><i class="icon icon-basket"></i><span>в корзину</span></a>
 											</div>
 										</div>
 									</div>
@@ -345,7 +390,7 @@ title: subcategory
 											<div class="item__categories">Ликер</div>
 											<div class="item__price"><span class="item__price_default">510 грн</span></div>
 											<div class="item__btn">
-												<a href="#" class="btn btn_block btn_small"><i class="icon icon-basket"></i><span>в корзину</span></a>
+												<a href="#" class="btn btn_block btn_small btn_icon"><i class="icon icon-basket"></i><span>в корзину</span></a>
 											</div>
 										</div>
 									</div>
@@ -370,7 +415,7 @@ title: subcategory
 											<div class="item__categories">Ликер</div>
 											<div class="item__price"><span class="item__price_default">510 грн</span></div>
 											<div class="item__btn">
-												<a href="#" class="btn btn_block btn_small"><i class="icon icon-basket"></i><span>в корзину</span></a>
+												<a href="#" class="btn btn_block btn_small btn_icon"><i class="icon icon-basket"></i><span>в корзину</span></a>
 											</div>
 										</div>
 									</div>
@@ -395,7 +440,7 @@ title: subcategory
 											<div class="item__categories">Ликер</div>
 											<div class="item__price"><span class="item__price_default">510 грн</span></div>
 											<div class="item__btn">
-												<a href="#" class="btn btn_block btn_small"><i class="icon icon-basket"></i><span>в корзину</span></a>
+												<a href="#" class="btn btn_block btn_small btn_icon"><i class="icon icon-basket"></i><span>в корзину</span></a>
 											</div>
 										</div>
 									</div>
@@ -420,7 +465,7 @@ title: subcategory
 											<div class="item__categories">Ликер</div>
 											<div class="item__price"><span class="item__price_default">510 грн</span></div>
 											<div class="item__btn">
-												<a href="#" class="btn btn_block btn_small"><i class="icon icon-basket"></i><span>в корзину</span></a>
+												<a href="#" class="btn btn_block btn_small btn_icon"><i class="icon icon-basket"></i><span>в корзину</span></a>
 											</div>
 										</div>
 									</div>

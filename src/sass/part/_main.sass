@@ -218,7 +218,7 @@
 		width: 100%
 	&__categories
 		color: #9ea2a8
-		margin-bottom: 17px
+		margin-bottom: 16px
 		+text-overflow
 	&__price
 		margin-bottom: 16px
@@ -366,6 +366,7 @@
 		top: 0
 		left: 0
 		width: 100%
+		padding: 0 40px
 		+clr
 		p
 			float: left
@@ -382,6 +383,7 @@
 		bottom: 0
 		left: 0
 		width: 100%
+		padding: 0 40px
 	&__btn
 		.btn
 			&:not(:last-child)
@@ -409,6 +411,7 @@
 	&__item
 		overflow: auto
 		height: 100%
+		padding: 0 40px
 
 // row-item
 .row-item
@@ -424,6 +427,8 @@
 		+vertical
 		img
 			max-height: 160px
+			display: inline-block
+			vertical-align: middle
 	&__content
 		margin-left: 80px
 		padding: 5px 0 0 20px
@@ -451,13 +456,7 @@
 	&__select
 		float: right
 		.select
-			background-color: #f5f5f5
-			border: none
-			+font-family($exo)
-			padding: 6px 15px
-			outline: none
-			cursor: pointer
-			border-radius: 2px
+			width: 60px
 	&__price
 		color: $pink
 		font-weight: 700
@@ -469,26 +468,26 @@
 	padding: 80px 0 40px
 	.row
 		font-size: 0
-.col-item
-	display: inline-block
-	width: 50%
-	vertical-align: top
-	padding: 0 20px
-	text-align: left
-	margin-bottom: 40px
 	&__wrapper
-		background-color: #f5f5f5
-		transition: background .3s linear
-		padding: 40px
-		+clr
-		&:hover
-			background-color: $pink
-			.col-item__title,
-			.col-item__btn,
-			p
-				color: $white
-			.col-item__btn:before
-				background-color: $black-lighten
+		display: inline-block
+		width: 50%
+		vertical-align: top
+		padding: 0 20px
+		margin-bottom: 40px
+.col-item
+	padding: 40px
+	text-align: left
+	background-color: #f5f5f5
+	transition: background .3s linear
+	+clr
+	&:hover
+		background-color: $pink
+		.col-item__title,
+		.col-item__btn,
+		p
+			color: $white
+		.col-item__btn:before
+			background-color: $black-lighten
 	&__title,
 	&__btn,
 	p
@@ -534,26 +533,248 @@
 		padding: 80px 0
 	.item__wrapper
 		box-shadow: 0 0 20px rgba(0,0,0,.1)
-// main-item
-.main-item
-	margin-bottom: 20px
-	border-bottom: 1px solid $white
+
+// card
+.card
+	padding: 80px 0
+	&__breadcrumbs
+		margin-bottom: 25px
+		li
+			margin-bottom: 10px
+			&.current
+				a
+					color: $black-lighten
+			a
+				color: #818181
+	&__content
+		padding-top: 10px
 	&__title
-		margin-bottom: 20px
-		a
-			text-transform: uppercase
-			letter-spacing: .2em
-			font-size: $text-xs
-			font-weight: 700
-			color: $black-lighten
-	&__checkboxes
-		padding-bottom: 10px
-	&__btn
-		a
-			color: #9ea2a8
-			&:after
+		font-size: 36px
+		letter-spacing: .025em
+		font-weight: 700
+		margin-bottom: 30px
+	&__rate
+		margin-bottom: 40px
+		font-size: 0
+		.rate
+			display: inline-block
+			vertical-align: middle
+		.number
+			display: inline-block
+			vertical-align: middle
+			margin-left: 20px
+			letter-spacing: .025em
+			font-size: $text-sm
+	&__list
+		li
+			font-size: 0
+			+clr
+			&:not(:last-child)
+				margin-bottom: 20px
+			span
+				font-size: $text-sm
+			.left
+				width: 100px
+				word-wrap: break-word
+				float: left
+			.right
+				color: #818181
+				overflow: hidden
+				display: block
+				padding-left: 5px
+	&__selects
+		padding-top: 21px
+	&__select
+		+clr
+		&:not(:last-child)
+			margin-bottom: 40px
+		span
+			display: block
+			overflow: hidden
+			padding: 10px 5px 0 0
+			word-wrap: break-word
+		.select
+			float: right
+			width: 118px
+	&__price
+		font-size: 0
+		padding-top: 45px
+		&_default
+			margin-right: 15px
+			font-size: 36px
+			color: $pink
+		&_old
+			font-size: 24px
+			position: relative
+			top: -2px
+			&:before
 				content: ""
 				position: absolute
-				+arr(8, 4, #9ea2a8, b)
-				left: 6px
-				top: 11px
+				left: 0
+				top: 50%
+				height: 1px
+				width: 100%
+				background-color: $black-lighten
+		span
+			display: inline-block
+			vertical-align: text-bottom
+			font-weight: 700
+	&__btn
+		padding-top: 30px
+		font-size: 0
+		.btn_large
+			max-width: 240px
+			margin-right: 40px
+			vertical-align: middle
+// case
+.case
+	box-shadow: 0 0 10px rgba(#0a0f17, .1)
+	position: relative
+	padding: 20px
+	&__sticker
+		position: absolute
+		top: 0
+		right: 0
+		color: $white
+		font-size: $text-xs
+		font-weight: 700
+		text-transform: uppercase
+		letter-spacing: .2em
+		padding: 18px 19px
+		&_orange
+			background-color: $orange
+	&__wrapper
+		height: 480px
+		position: relative
+	&__nav
+		width: 90px
+		overflow: auto
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+	&__for
+		height: 100%
+		padding: 0 110px
+	&__item
+		&_small,
+		&_big
+			overflow: hidden
+			+vertical
+		&_small
+			height: 120px
+			border: 1px solid #f5f5f5
+			display: block
+			padding: 5px
+			transition: border-color .3s linear
+			&:not(:last-child)
+				margin-bottom: 10px
+			&.active
+				border-color: $black-lighten
+			img
+				max-height: 100px
+				display: inline-block
+				vertical-align: middle
+		&_big
+			height: 100%
+			img
+				max-height: 440px
+				display: inline-block
+				vertical-align: middle
+
+// description
+.description
+	.title
+		color: $pink
+		font-size: 24px
+		line-height: 1.34
+		font-weight: 700
+		padding: 0
+		margin-bottom: 45px
+	.row
+		margin: 0 -60px
+		.col
+			padding: 0 60px
+	.sub-title
+		font-size: $text-exmd
+		letter-spacing: .025em
+		font-weight: 700
+		margin-bottom: 20px
+		&_center
+			text-align: center
+	p
+		font-size: $text-reg
+		color: #818181
+		line-height: 1.5
+	&__grid
+		margin-bottom: 10px
+	&__row
+		margin-bottom: 30px
+	&__block
+		max-width: 600px
+		width: 100%
+		margin: 0 auto
+		padding-bottom: 35px
+		p
+			margin-bottom: 30px
+
+// reviews
+.reviews
+	padding-bottom: 80px
+	.title
+		padding: 0 0 65px
+		font-size: 36px
+		font-weight: 700
+		letter-spacing: .025em
+	&__btn
+		text-align: center
+.review
+	margin-bottom: 55px
+	&__name
+		font-size: 20px
+		font-weight: 700
+		letter-spacing: .025em
+		margin-bottom: 20px
+	.rate
+		margin-bottom: 15px
+	&__text
+		color: #818181
+		font-size: $text-reg
+		line-height: 1.5
+		margin-bottom: 20px
+		a
+			color: #818181
+			font-style: italic
+			text-decoration: underline
+			font-size: $text-sm
+			&:hover
+				text-decoration: none
+	&__data
+		font-size: $text-xs
+		color: #9ea2a8
+
+// comment
+.comment
+	position: relative
+	.title
+		padding: 0
+		margin-bottom: 15px
+		font-size: $text-exmd
+		font-weight: 700
+		letter-spacing: .025em
+	.row
+		margin: 0 -80px
+		.col
+			padding: 0 80px
+	.rate
+		margin-bottom: 35px
+	.btn
+		margin-top: 40px
+
+// cart
+.cart
+	&__title
+		font-size: 24px
+		font-weight: 700
+		letter-spacing: .025em
+		margin-bottom: 9px

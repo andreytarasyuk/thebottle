@@ -4,11 +4,13 @@
 	text-align: center
 	font-size: $text-xs
 	color: $white
+	+font-family($exo)
+	line-height: 1
 	letter-spacing: .2em
 	font-weight: 700
 	border-radius: 3px
 	text-transform: uppercase
-	padding: 9px 10px
+	padding: 8px 10px
 	display: inline-block
 	transition: background-color .3s linear, border-color .3s linear, color .3s linear
 	outline: none !important
@@ -25,16 +27,27 @@
 		max-width: 280px
 		width: 100%
 		padding: 17px 10px
-	&_small
-		font-size: 0
+		&.btn_icon
+			padding: 13px 10px
+		span
+			font-size: $text-xs
+	&_small,
+	&_large
 		.icon,
 		span
 			display: inline-block
 			vertical-align: middle
-			font-size: 10px
 			letter-spacing: .2em
 		.icon
 			margin-right: 15px
+	&_small
+		padding: 12px 10px
+		max-width: 240px
+		width: 100%
+		&.btn_icon
+			padding: 8.5px 10px
+		span
+			font-size: 10px
 	&_block
 		display: block
 		max-width: 100%
@@ -88,3 +101,16 @@
 	&_basket
 		display: inline-block
 		vertical-align: middle
+	&-add
+		font-size: 0
+		display: inline-block
+		padding: 10px 0
+		span,
+		.icon
+			display: inline-block
+			vertical-align: middle
+		.icon
+			margin-right: 10px
+		span
+			font-size: $text-sm
+			color: $black-lighten

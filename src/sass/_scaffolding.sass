@@ -5,6 +5,9 @@ body
 	+font-family($exo)
 	font-weight: 400
 	min-width: 1100px
+	&.popup-open
+		overflow: hidden
+		padding-right: 17px
 p,a,span,input,h1,h2,h3,h4,h5,h6
 	letter-spacing: .025em
 a
@@ -43,7 +46,8 @@ h4
 	padding: 0 10px
 	margin: 0 auto
 	+clr
-
+.out
+	position: relative
 
 // slick
 .slick
@@ -93,6 +97,13 @@ h4
 // title
 .title
 	padding: 76px 0
+	&_center
+		text-align: center
+	&_inline
+		+clr
+		h3
+			display: inline-block
+			margin-right: 20px
 
 // animation-line
 .animation-line
@@ -115,6 +126,7 @@ h4
 // rate
 .rate
 	font-size: 0
+	margin: 0 -3px
 	li
 		display: inline-block
 		&.active
@@ -123,6 +135,14 @@ h4
 		a
 			padding: 0 3px
 			display: inline-block
+	&_big
+		margin: 0 -5px
+		li
+			&.active
+				.icon-star-big
+					+sprite($s-icon-star-full-big)
+			a
+				padding: 0 5px
 
 // input
 .input
@@ -222,17 +242,37 @@ h4
 		height: 100vh
 		background-color: $white
 		z-index: 9999
-		padding: 30px 40px 40px
+		padding: 30px 0 40px
 		// display: none
+	&-center
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		max-width: 1080px
+		width: 100%
+		background-color: $white
+		height: 420px
+		padding: 75px 80px 80px
+		z-index: 9996
+		box-shadow: 0 0 10px rgba(#0a0f17, .25)
+		display: none
+		.btn-close
+			position: absolute
+			font-size: 0
+			right: 10px
+			top: 10px
+			padding: 10px
 
 // breadcrumbs
 .breadcrumbs
 	font-size: 0
+	margin: 0 -12px
 	li
 		display: inline-block
 		padding: 0 2px
 		position: relative
-		&:not(:first-child)
+		&:not(:last-child)
 			&:before
 				content: ""
 				width: 4px
@@ -240,9 +280,9 @@ h4
 				background-color: $pink
 				border-radius: 50%
 				position: absolute
-				left: -2px
+				right: -2px
 				top: 50%
-		&.active
+		&.current
 			a
 				cursor: default
 				pointer-events: none
@@ -253,6 +293,13 @@ h4
 			color: #9ea2a8
 			letter-spacing: .05em
 			display: inline-block
+	&_right
+		float: right
+		padding-top: 13px
+		li
+			&.current
+				a
+					color: $black-lighten
 
 // aside
 .aside
@@ -270,72 +317,119 @@ h4
 	&__title
 		font-weight: 700
 		font-size: $text-exmd
-		margin: -5px 0 35px 0
+		margin: -5px 0 15px 0
 
 // checkbox
-.checkbox,
-.chechbox label
-	padding-left: 0
-	white-space: nowrap
-.checkbox,
-.main-item__btn
+.checkbox
+	margin-bottom: 10px
 	font-size: 0
-	margin-bottom: 12px
-	label,
-	a
+	label
 		min-height: 20px
+		min-width: 20px
 		display: inline-block
-		color: #818181
 		cursor: pointer
 		font-weight: 400
-		font-size: $text-sm
 		position: relative
+		padding-left: 20px
 		&:hover
-			&:before
+			.checkbox__icon
 				border-color: $pink
-		&:before
-			content: ""
-			display: inline-block
-			vertical-align: text-bottom
-			width: 20px
-			height: 20px
-			border: 1px solid transparent
-			background-color: $white
-			border-radius: 2px
-			margin-right: 10px
-			position: relative
-			top: 2px
-.checkbox
-	label
-		letter-spacing: .025em
+		input[type=radio]:checked ~ .checkbox__icon
+			border-color: $black-lighten
+			&:before
+				opacity: 1
+				visibility: visible
+	&__text
+		display: inline-block
+		vertical-align: middle
+		margin-left: 10px
+		padding-top: 2px
+		color: #818181
+		font-size: $text-sm
 		span
-			font-size: $text-xs
+			margin-left: 11px
 			color: #c6c7c8
-			margin-left: 10px
+			font-size: $text-xs
+.checkbox__icon,
+.filter__icon
+		position: absolute
+		width: 20px
+		height: 20px
+		left: 0
+		top: 0
+		background-color: $white
+		border-radius: 2px
+		border: 1px solid $white
+		transition: border-color .3s linear
 		&:before
-			transition: border-color .3s linear
-		&:after
 			content: ""
-			position: absolute
 			width: 10px
 			height: 10px
-			border-radius: 2px
 			background-color: $black-lighten
-			left: 5px
-			top: 7px
-			visibility: hidden
+			border-radius: 2px
+			position: absolute
+			left: 4px
+			top: 4px
 			opacity: 0
-			transition: visibility .3s linear, opacity .3s linear
-	input[type="radio"]
-		&:checked + label
-			&:before
-				border-color: $black-lighten
-			&:after
-				visibility: visible
-				opacity: 1
+			visibility: hidden
+			transition: opacity .3s linear, visibility .3s linear
+
 input[type="checkbox"],
 input[type="radio"]
 	display: none
+
+// select
+.select
+	background-color: #f5f5f5
+	border: none
+	+font-family($exo)
+	padding: 6px 15px
+	outline: none
+	cursor: pointer
+	border-radius: 2px
+
+// filter
+.filter
+	border-bottom: 1px solid $white
+	&__title
+		a
+			text-transform: uppercase
+			letter-spacing: .2em
+			font-size: $text-xs
+			font-weight: 700
+			display: block
+			color: $black-lighten
+			padding: 20px 0
+	&__checkboxes
+		padding-bottom: 10px
+	&__btn
+		margin-bottom: 10px
+		font-size: 0
+		a
+			position: relative
+			padding-left: 20px
+			min-width: 20px
+			min-height: 20px
+			display: inline-block
+			&:hover
+				.filter__icon
+					border-color: $pink
+	&__text
+		color: #9ea2a8
+		display: inline-block
+		vertical-align: middle
+		margin-left: 10px
+		padding-top: 2px
+		font-size: $text-sm
+	&__icon
+		&:before
+			display: none
+		&:after
+			content: ""
+			position: absolute
+			+arr(8, 4, #9ea2a8, b)
+			left: 5px
+			top: 8px
 
 // sotring
 .sorting
@@ -343,14 +437,14 @@ input[type="radio"]
 	+clr
 	&__title
 		float: left
-		margin-bottom: 20px
+		margin: 0 40px 20px 0
 		letter-spacing: .2em
 		font-weight: 700
 		font-size: $text-xs
 		text-transform: uppercase
 	&__list
-		margin: 0 -20px
-		padding: 2px 0 0 40px
+		margin: 0 -20px 10px
+		padding-top: 2px
 		float: left
 		font-size: 0
 		li
@@ -371,3 +465,59 @@ input[type="radio"]
 				&:before
 					background-color: $black-lighten
 					transform: scale(0, 1)
+
+// tabs
+.tabs
+	&__controls
+		background-color: $black-lighten
+		font-size: 0
+		margin-bottom: 70px
+	&__control
+		width: 33.33%
+		display: inline-block
+		vertical-align: top
+		font-size: $text-xs
+		letter-spacing: .2em
+		text-transform: uppercase
+		text-align: center
+		padding: 19px 10px
+		font-weight: 700
+		color: #9ea2a8
+		position: relative
+		&.active
+			color: $white
+			&:before
+				display: block
+		&:before
+			content: ""
+			position: absolute
+			left: 50%
+			top: 100%
+			margin-left: -8px
+			+arr(16, 8, $black-lighten, b)
+			display: none
+	&__item
+		display: none
+		&.active
+			display: block
+
+// input
+.input
+	height: 50px
+	padding: 5px 20px
+.textarea
+	height: 140px
+	padding: 10px 20px
+	resize: none
+.input,
+.textarea
+	font-size: $text-reg
+	letter-spacing: .025em
+	color: $black-lighten
+	outline: none
+	+font-family($exo)
+	+placeholder($black-lighten)
+	max-width: 420px
+	width: 100%
+	border: 1px solid $black-lighten
+	background-color: #f5f5f5
