@@ -771,10 +771,107 @@
 	.btn
 		margin-top: 40px
 
+.cart-page
+	padding-bottom: 80px
 // cart
 .cart
 	&__title
 		font-size: 24px
 		font-weight: 700
 		letter-spacing: .025em
-		margin-bottom: 9px
+	&__head
+		text-align: right
+		.cart__col
+			padding: 9px 40px 15px
+	&__item
+		background-color: #f5f5f5
+		font-size: 0
+	&__col
+		padding: 20px 40px
+		position: relative
+	&__body
+		margin-bottom: 25px
+	&__img,
+	&__info,
+	&__col
+		display: inline-block
+		vertical-align: middle
+	&__close
+		position: absolute
+		right: 40px
+		top: 50%
+		padding: 20px
+		transform: translate3d(50%,-50%,0)
+	&__img
+		width: 90px
+		height: 120px
+		padding: 5px
+		background-color: $white
+		margin-right: 20px
+		+vertical
+		img
+			display: inline-block
+			vertical-align: middle
+	&__info
+		max-width: 180px
+	&__name
+		font-size: $text-sm
+		font-weight: 700
+		line-height: 1.29
+		letter-spacing: .01em
+		margin-bottom: 14px
+	&__categories
+		letter-spacing: .025em
+		font-size: $text-sm
+		color: #9ea2a8
+	&__value
+		font-size: $text-sm
+		font-weight: 700
+		letter-spacing: .01em
+	&__select
+		width: 120px
+		background-color: $white
+		font-size: $text-sm
+		letter-spacing: .025em
+		padding: 5px 15px 6px 5px
+		text-align: left
+	&__total,
+	&__label,
+	&__number
+		padding: 10px 40px
+	&__price,
+	&__amount,
+	&__total,
+	&__number
+		width: 13%
+		padding-left: 20px
+		text-align: right
+	&__qua,
+	&__label
+		width: 18.6%
+	&__product
+		width: 55.4%
+		padding-right: 60px
+	&__number,
+	&__label
+		font-size: $text-sm
+		letter-spacing: .025em
+		padding-left: 20px
+	&__total
+		font-size: 20px
+		letter-spacing: .025em
+		font-weight: 700
+		color: $pink
+		padding-left: 0
+		white-space: nowrap
+	&__label_bottom,
+	&__totl_bottom
+		vertical-align: bottom
+	&__heading
+		font-size: $text-sm
+		color: #818181
+	&__result
+		margin-bottom: 65px
+	&__result,
+	&__footer
+		text-align: right
