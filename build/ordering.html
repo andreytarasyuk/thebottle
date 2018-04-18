@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="ru-Ru">
+<head>
+	<meta charset="utf-8">
+	<title>ordering</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#fff">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<!-- Libs stylesheet -->
+	<link rel="stylesheet" media="all" href="css/style.min.css">
+</head>
+
+<body>
+	<div class="out">
+		<!-- header BEGIN -->
+<header class="header">
+	<div class="inner">
+		<div class="header__wrapper">
+			<div class="header__left">
+				<a href="#" class="header__btn btn_menu"><i class="icon icon-menu"></i></a>
+				<a href="#" class="header__btn btn_search"><i class="icon icon-search"></i></a>
+			</div>
+			<a href="index.html" class="logo header__logo"><img src="img/logo.png" alt="THEBOTTLE"></a>
+			<div class="header__right">
+				<a href="#" class="btn_login">
+					<span>войти</span>
+				</a>
+				<a href="#" class="btn_basket">
+					<i class="icon icon-login"></i>
+					<span class="number">3</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="header__menu">
+		<div class="menu">
+			<div class="inner">
+				<div class="row">
+					<div class="col col-3">
+						<div class="simple-item">
+							<div class="simple-item__title">
+								<div class="simple-item__icon">
+									<i class="icon icon-alcohol"></i>
+								</div>
+								<span>крепкие напитки</span>
+							</div>
+							<ul class="dropdown simple-item__dropdown">
+								<li><a href="#">виски</a></li>
+								<li><a href="#">бренди</a></li>
+								<li><a href="#">ром</a></li>
+								<li><a href="#">джин</a></li>
+								<li><a href="#">текила</a></li>
+								<li><a href="#">водка</a></li>
+								<li><a href="#">абсент</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col col-3">
+						<div class="simple-item">
+							<div class="simple-item__title">
+								<div class="simple-item__icon">
+									<i class="icon icon-liqueurs"></i>
+								</div>
+								<span>ликеры</span>
+							</div>
+							<ul class="dropdown simple-item__dropdown">
+								<li><a href="#">виски</a></li>
+								<li><a href="#">бренди</a></li>
+								<li><a href="#">ром</a></li>
+								<li><a href="#">джин</a></li>
+								<li><a href="#">текила</a></li>
+								<li><a href="#">водка</a></li>
+								<li><a href="#">абсент</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col col-3">
+						<div class="simple-item">
+							<div class="simple-item__title">
+								<div class="simple-item__icon">
+									<i class="icon icon-wine"></i>
+								</div>
+								<span>вина и игристые вина</span>
+							</div>
+							<ul class="dropdown simple-item__dropdown">
+								<li><a href="#">виски</a></li>
+								<li><a href="#">бренди</a></li>
+								<li><a href="#">ром</a></li>
+								<li><a href="#">джин</a></li>
+								<li><a href="#">текила</a></li>
+								<li><a href="#">водка</a></li>
+								<li><a href="#">абсент</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col col-3">
+						<div class="simple-item">
+							<div class="simple-item__title">
+								<div class="simple-item__icon">
+									<i class="icon icon-vermouth"></i>
+								</div>
+								<span>вермуты</span>
+							</div>
+							<ul class="dropdown simple-item__dropdown">
+								<li><a href="#">виски</a></li>
+								<li><a href="#">бренди</a></li>
+								<li><a href="#">ром</a></li>
+								<li><a href="#">джин</a></li>
+								<li><a href="#">текила</a></li>
+								<li><a href="#">водка</a></li>
+								<li><a href="#">абсент</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- header END -->
+
+
+		<!-- ordering-page BEGIN -->
+		<div class="ordering-page">
+			<div class="inner">
+				<div class="title title_inline">
+					<h3>корзина<span>.</span></h3>
+					<ul class="breadcrumbs breadcrumbs_right">
+						<li><a href="#">Главная</a></li>
+						<li class="current"><a href="#">Оформление заказа</a></li>
+					</ul>
+				</div>
+				<div class="cart">
+					<div class="cart__title">Ваш заказ</div>
+					<div class="cart__head">
+						<div class="cart__col cart__price">
+							<span class="cart__heading">Цена</span>
+						</div>
+						<div class="cart__col cart__qua">
+							<span class="cart__heading">Количество</span>
+						</div>
+						<div class="cart__col cart__amount">
+							<span class="cart__heading">Сумма</span>
+						</div>
+					</div>
+					<div class="cart__body">
+						<div class="cart__scroll">
+							<div class="cart__item">
+								<div class="cart__col cart__product">
+									<div class="cart__img">
+										<img src="img/cart-img-00.png" alt="img">
+									</div>
+									<div class="cart__info">
+										<div class="cart__name">Johnnie Walker Red Rye Finish, 1 л</div>
+										<div class="cart__categories">Виски</div>
+									</div>
+									<a href="#" class="cart__close"><i class="icon icon-close-gray"></i></a>
+								</div>
+								<div class="cart__col cart__price"><span class="cart__value">1 375 грн</span></div>
+								<div class="cart__col cart__qua">
+									<select class="select cart__select">
+										<option>0.7 литров</option>
+										<option>1 литр</option>
+										<option>2 литра</option>
+									</select>
+								</div>
+								<div class="cart__col cart__amount"><span class="cart__value">2 750 грн</span></div>
+							</div>
+							<div class="cart__item">
+								<div class="cart__col cart__product">
+									<div class="cart__img">
+										<img src="img/cart-img-00.png" alt="img">
+									</div>
+									<div class="cart__info">
+										<div class="cart__name">Johnnie Walker Red Rye Finish, 1 л</div>
+										<div class="cart__categories">Виски</div>
+									</div>
+									<a href="#" class="cart__close"><i class="icon icon-close-gray"></i></a>
+								</div>
+								<div class="cart__col cart__price"><span class="cart__value">1 375 грн</span></div>
+								<div class="cart__col cart__qua">
+									<select class="select cart__select">
+										<option>0.7 литров</option>
+										<option>1 литр</option>
+										<option>2 литра</option>
+									</select>
+								</div>
+								<div class="cart__col cart__amount"><span class="cart__value">2 750 грн</span></div>
+							</div>
+							<div class="cart__item">
+								<div class="cart__col cart__product">
+									<div class="cart__img">
+										<img src="img/cart-img-00.png" alt="img">
+									</div>
+									<div class="cart__info">
+										<div class="cart__name">Johnnie Walker Red Rye Finish, 1 л</div>
+										<div class="cart__categories">Виски</div>
+									</div>
+									<a href="#" class="cart__close"><i class="icon icon-close-gray"></i></a>
+								</div>
+								<div class="cart__col cart__price"><span class="cart__value">1 375 грн</span></div>
+								<div class="cart__col cart__qua">
+									<select class="select cart__select">
+										<option>0.7 литров</option>
+										<option>1 литр</option>
+										<option>2 литра</option>
+									</select>
+								</div>
+								<div class="cart__col cart__amount"><span class="cart__value">2 750 грн</span></div>
+							</div>
+							<div class="cart__item">
+								<div class="cart__col cart__product">
+									<div class="cart__img">
+										<img src="img/cart-img-00.png" alt="img">
+									</div>
+									<div class="cart__info">
+										<div class="cart__name">Johnnie Walker Red Rye Finish, 1 л</div>
+										<div class="cart__categories">Виски</div>
+									</div>
+									<a href="#" class="cart__close"><i class="icon icon-close-gray"></i></a>
+								</div>
+								<div class="cart__col cart__price"><span class="cart__value">1 375 грн</span></div>
+								<div class="cart__col cart__qua">
+									<select class="select cart__select">
+										<option>0.7 литров</option>
+										<option>1 литр</option>
+										<option>2 литра</option>
+									</select>
+								</div>
+								<div class="cart__col cart__amount"><span class="cart__value">2 750 грн</span></div>
+							</div>
+						</div>
+					</div>
+					<div class="cart__result">
+						<div class="cart__row">
+							<div class="cart__col cart__label">Количество</div>
+							<div class="cart__col cart__number">4 шт.</div>
+						</div>
+						<div class="cart__row">
+							<div class="cart__col cart__label cart__label_bottom">Итого к оплате:</div>
+							<div class="cart__col cart__total cart__total_bottom">5 500грн</div>
+						</div>
+					</div>
+					<div class="cart__footer">
+						<button class="btn btn_large btn_xl">Оформить заказ</button>
+					</div>
+				</div>
+
+				<!-- order BEGIN -->
+				<div class="order">
+					<!-- steps BEGIN -->
+					<ul class="steps">
+						<li class="step is-current"><span>шаг 1: Контактные данные</span></li>
+						<li class="step"><span>шаг 2: Информация о доставке</span></li>
+						<li class="step"><span>шаг 3: подтверждение заказа</span></li>
+					</ul>
+					<!-- steps END -->
+					<form action="/" class="form form-step">
+						<div class="row form__row">
+							<div class="col col-6 form__col">
+								<div class="form-item">
+									<div class="form-item__title">Ваше имя*</div>
+									<div class="form-item__input">
+										<input type="text" class="input">
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-item__title">Ваша фамилия*</div>
+									<div class="form-item__input">
+										<input type="text" class="input error">
+									</div>
+								</div>
+								<div class="form__bottom form__bottom_right">
+									<a href="#" class="form__link">Я постоянный клиент</a>
+								</div>
+							</div>
+							<div class="col col-6 form__col">
+								<div class="form-item">
+									<div class="form-item__title">Телефон*</div>
+									<div class="form-item__input">
+										<input type="text" class="input">
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-item__title">Email адрес</div>
+									<div class="form-item__input">
+										<input type="text" class="input">
+									</div>
+								</div>
+								<button class="btn btn_large btn_block">Далее</button>
+							</div>
+						</div>
+					</form>
+					<!-- steps BEGIN -->
+					<ul class="steps">
+						<li class="step"><span>шаг 1: Контактные данные</span></li>
+						<li class="step is-current"><span>шаг 2: Информация о доставке</span></li>
+						<li class="step"><span>шаг 3: подтверждение заказа</span></li>
+					</ul>
+					<!-- steps END -->
+					<form action="/" class="form form-step">
+						<div class="row form__row">
+							<div class="col col-6 form__col">
+								<div class="form-item">
+									<div class="form-item__title">Город</div>
+									<select class="select select_lg">
+										<option>Киев</option>
+										<option>Одесса</option>
+										<option>Харьков</option>
+									</select>
+								</div>
+								<div class="form-item">
+									<div class="form-item__title">Варианты доставки</div>
+									<select class="select select_lg">
+										<option>Бесплатно курьером</option>
+										<option>Платно курьером</option>
+										<option>Платно</option>
+									</select>
+								</div>
+								<div class="form-item">
+									<div class="form-item__title">Улица</div>
+									<div class="form-item__input">
+										<input type="text" class="input">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col col-6">
+										<div class="form-item">
+											<div class="form-item__title">Дом</div>
+											<div class="form-item__input">
+												<input type="text" class="input">
+											</div>
+										</div>
+									</div>
+									<div class="col col-6">
+										<div class="form-item">
+											<div class="form-item__title">Квартира</div>
+											<div class="form-item__input">
+												<input type="text" class="input">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col col-6 form__col">
+								<div class="form-item">
+									<div class="form-item__title">Варианты доставки</div>
+									<select class="select select_lg">
+										<option>Бесплатно курьером</option>
+										<option>Платно курьером</option>
+										<option>Платно</option>
+									</select>
+								</div>
+								<div class="form-item">
+									<div class="form-item__title">Варианты доставки</div>
+									<select class="select select_lg">
+										<option>Бесплатно курьером</option>
+										<option>Платно курьером</option>
+										<option>Платно</option>
+									</select>
+								</div>
+								<div class="form-item">
+									<div class="form-item__title">Текст комментария</div>
+									<textarea class="textarea textarea-md"></textarea>
+								</div>
+								<button class="btn btn_large btn_block">Далее</button>
+							</div>
+						</div>
+					</form>
+					<!-- steps BEGIN -->
+					<ul class="steps">
+						<li class="step"><span>шаг 1: Контактные данные</span></li>
+						<li class="step"><span>шаг 2: Информация о доставке</span></li>
+						<li class="step is-current"><span>шаг 3: подтверждение заказа</span></li>
+					</ul>
+					<!-- steps END -->
+					<form action="/" class="form form-step">
+						<div class="row form__row">
+							<div class="col col-6 form__col">
+								<div class="form-item">
+									<div class="form-item__title">Контактные данные</div>
+									<ul class="confirmation confirmation_sm">
+										<li class="confirmation__item"><span class="label">Имя:</span><span class="value">Дмитрий</span></li>
+										<li class="confirmation__item"><span class="label">Фамилия:</span><span class="value">Наприенко</span></li>
+										<li class="confirmation__item"><span class="label">Телефон:</span><span class="value">+380 (95) 005 90 25</span></li>
+										<li class="confirmation__item"><span class="label">Email адрес:</span><span class="value">dmitrynaprienko@gmail.com</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col-6 form__col">
+								<div class="form-item">
+									<div class="form-item__title">Информация о доставке</div>
+									<ul class="confirmation">
+										<li class="confirmation__item"><span class="label">Город:</span><span class="value">Киев</span></li>
+										<li class="confirmation__item"><span class="label">Вариант доставки:</span><span class="value">Бесплатно курьером</span></li>
+										<li class="confirmation__item"><span class="label">Адрес:</span><span class="value">ул. Саксаганского, д. 3, кв. 5</span></li>
+										<li class="confirmation__item"><span class="label">Время:</span><span class="value">Завтра с 11:00 до 15:00</span></li>
+										<li class="confirmation__item"><span class="label">Вариант оплаты:</span><span class="value">Наличные</span></li>
+										<li class="confirmation__item"><span class="label">Комментарий:</span><span class="value">Можем выпить вместе с курьером у меня на кухне :)</span></li>
+									</ul>
+									<div class="form-item__checkbox">
+										<label class="checkbox checkbox_black">
+											<input type="checkbox">
+											<span class="checkbox__text">Не перезванивайте мне для подтвержденя заказа</span>
+											<span class="checkbox__icon"></span>
+										</label>
+									</div>
+								</div>
+								<button class="btn btn_large btn_block">оформить заказ</button>
+							</div>
+						</div>
+					</form>
+
+				</div>
+				<!-- order BEGIN -->
+			</div>
+		</div>
+		<!-- popup BEGIN -->
+		<div class="popup">
+			<div class="inner popup__inner popup__inner_md">
+				<div class="popup__content popup__content_center">
+					<a href="#" class="btn-close"><i class="icon icon-close"></i></a>
+					<div class="popup__title">Спасибо за заказ!</div>
+					<p>Все наши служны уже работают над Вашим заказом. <br /> В ближайшее время с Вами свяжется менеджер, чтобы обсудить все детали покупки. Отличного Вам настроения!
+					</p>
+					<button class="btn btn_large btn_block">вернуться на главную</button>
+				</div>
+			</div>
+		</div>
+		<!-- popup END -->
+
+		<!-- footer BEGIN -->
+<footer class="footer">
+	<div class="inner">
+		<div class="footer__content">
+			<div class="row">
+				<div class="col col-20">
+					<div class="sm-item">
+						<a href="#" class="logo footer__logo">
+							<img src="img/logo.png" alt="THEBOTTLE">
+						</a>
+					</div>
+				</div>
+				<div class="col col-20">
+					<div class="sm-item">
+						<div class="sm-item__title">категории</div>
+						<ul class="sm-item__list">
+							<li><a href="#">Крепкие напитки</a></li>
+							<li><a href="#">Ликеры</a></li>
+							<li><a href="#">Вина и игристые вина</a></li>
+							<li><a href="#">Вермуты</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col col-20">
+					<div class="sm-item">
+						<div class="sm-item__title">информация</div>
+						<ul class="sm-item__list">
+							<li><a href="#">О магазине</a></li>
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">Условия работы</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col col-22">
+					<div class="sm-item">
+						<div class="sm-item__title">Акции и новости</div>
+						<div class="sm-item__input">
+							<div class="input__address">
+								<form action="/">
+									<input type="text" class="input" placeholder="Адрес электронной почты">
+									<button><i class="icon icon-input-arrow"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col col-18">
+					<div class="sm-item sm-item_indent">
+						<div class="sm-item__title">мы в соц. сетях</div>
+						<div class="sm-item__social">
+							<ul class="social">
+								<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+								<li><a href="#"><i class="icon icon-instagram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="footer__copyright text">© TheBottle, 2018. Все права защищены </div>
+			<div class="footer__created text">Created by Naprienko</div>
+		</div>
+	</div>
+</footer>
+<!-- footer END -->
+
+	</div>
+
+	<!-- script begin -->
+	<script src="js/vendor/jquery-3.1.1.min.js"></script>
+	<script src="js/vendor/slick.min.js"></script>
+	<script src="js/app.js"></script>
+	<!-- script end -->
+
+</body>
+</html>
