@@ -47,6 +47,7 @@
 			line-height: 1.5
 			padding: 40px 0
 			color: $white
+			margin-bottom: 0
 	&__breadcrumbs
 		position: absolute
 		right: 0
@@ -128,6 +129,8 @@
 		text-transform: uppercase
 		color: $gray
 		letter-spacing: .2em
+		line-height: 1
+		margin-bottom: 0
 	&__wrapper
 		position: relative
 		z-index: 5
@@ -266,9 +269,6 @@
 			color: $black-lighten
 			font-size: 32px
 		p
-			font-size: $text-reg
-			color: #818181
-			line-height: 1.5
 			margin-bottom: 30px
 	&_left
 		padding: 0 40px 0 100px
@@ -512,7 +512,7 @@
 	p
 		font-size: $text-sm
 		line-height: 1.43
-		color: #818181
+		margin-bottom: 0
 		overflow: hidden
 		height: 5.715em
 	&__btn
@@ -702,10 +702,6 @@
 		margin-bottom: 20px
 		&_center
 			text-align: center
-	p
-		font-size: $text-reg
-		color: #818181
-		line-height: 1.5
 	&__grid
 		margin-bottom: 10px
 	&__row
@@ -916,3 +912,71 @@
 		.label
 			line-height: 1.29
 			font-size: $text-sm
+
+.about
+	padding: 80px 0 25px
+	.article
+		max-width: 600px
+		margin: 0 auto 45px
+	.reviews
+		padding-bottom: 0
+		.title
+			padding: 25px 0
+			p
+				font-weight: 400
+				margin-top: 20px
+				strong
+					color: $black-lighten
+// article
+.article
+	max-width: 600px
+	margin: 0 auto 45px
+	h2
+		font-size: $text-exmd
+		color: $black-lighten
+		text-align: center
+		margin-bottom: 20px
+		&:not(:first-child)
+			padding-top: 20px
+	p
+		a
+			color: $pink
+			font-weight: 700
+	ul
+		li
+			padding-left: 40px
+			position: relative
+			&:before
+				content: ""
+				width: 20px
+				height: 1px
+				background-color: $pink
+				position: absolute
+				left: 0
+				top: 12px
+// delivery
+.delivery
+	padding-bottom: 35px
+
+// contacts
+.contacts
+	padding-bottom: 50px
+	p a
+		color: $pink
+		font-weight: 700
+	&__wrapper
+		margin-top: 50px
+		p
+			margin-bottom: 28px
+.contacts-item
+	margin-bottom: 45px
+	&__title
+		font-weight: 700
+		font-size: $text-exmd
+		letter-spacing: .025em
+		margin-bottom: 16px
+	p
+		margin-bottom: 4px
+		a
+			color: #818181
+			font-weight: 400

@@ -1,0 +1,77 @@
+---
+title: contacts
+---
+<!doctype html>
+<html lang="ru-Ru">
+{% include "partials/_head.html" %}
+<body>
+	<div class="out">
+		{% include "partials/_header.html" %}
+
+		<!-- contacts BEGIN -->
+		<div class="contacts">
+			<div class="inner">
+				<div class="title title_inline">
+					<h3>Контакты магазина<span>.</span></h3>
+					<ul class="breadcrumbs breadcrumbs_right">
+						<li><a href="#">Главная</a></li>
+						<li class="current"><a href="#">Контакты магазина</a></li>
+					</ul>
+				</div>
+				<div class="row">
+					<div class="col col-6">
+						<div class="contacts-item">
+							<div class="contacts-item__title">Телефон</div>
+							<p><a href="tel:+380950059025">+380 (95) 005 90 25</a></p>
+						</div>
+					</div>
+					<div class="col col-6">
+						<div class="contacts-item">
+							<div class="contacts-item__title">Электронный адрес</div>
+							<p><a href="mailto:sales@thebottle.com.ua">sales@thebottle.com.ua</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col-6">
+						<div class="contacts-item">
+							<div class="contacts-item__title">Время работы</div>
+							<p>Пн-Пт: 09:00 - 19:00.</p>
+							<p>Сб-Вс: выходные</p>
+						</div>
+					</div>
+					<div class="col col-6">
+						<div class="contacts-item">
+							<div class="contacts-item__title">По вопросам сотрудничества</div>
+							<p><a href="mailto:partner@thebottle.com.ua">partner@thebottle.com.ua</a></p>
+							<p>Алексей и Яна</p>
+						</div>
+					</div>
+				</div>
+				<div class="contacts__wrapper">
+					<div class="row">
+						<div class="col col-6">
+							<p>Мы будем очень рады получить письмо с вашими вопросами, пожеланиями, и предложениями</p>
+							<p>Если вам что-то не понравилось (цены, ассортимент) или вы не нашли нужного вина, то напишите нам - мы вам ответим и обязательно поможем.</p>
+						</div>
+						<div class="col col-6">
+							<p>По вашему запросу мы можем предоставить копии сертификатов на алкогольные напитки вместе с вашей заявкой.</p>
+							<p>Дополнительную информацию о работе нашего магазина вы можете получить в разделе <a href="#">Доставка и оплата.</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- contacts END -->
+
+		{% include "partials/_footer.html" %}
+	</div>
+
+	<!-- script begin -->
+	<script src="js/vendor/jquery-3.1.1.min.js"></script>
+	<script src="js/vendor/slick.min.js"></script>
+	<script src="js/app.js"></script>
+	<!-- script end -->
+
+</body>
+</html>
