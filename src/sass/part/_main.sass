@@ -43,8 +43,6 @@
 		h2
 			margin-bottom: 0
 		p
-			font-size: $text-reg
-			line-height: 1.5
 			padding: 40px 0
 			color: $white
 			margin-bottom: 0
@@ -281,8 +279,6 @@
 			margin-left: 42.56%
 		.box__content
 			padding-left: 80px
-			.box__btn
-				float: right
 	&_right
 		padding: 0 100px 0 100px
 		.box__img
@@ -301,6 +297,7 @@
 		font-size: $text-xs
 		color: $black-lighten
 		font-weight: 700
+		float: right
 
 .sm-item
 	&_indent
@@ -373,6 +370,8 @@
 			font-weight: 700
 			text-transform: uppercase
 			font-size: $text-xs
+			line-height: 1
+			color: $black-lighten
 			letter-spacing: .2em
 			padding: 2px 0 2px 65px
 	&__close
@@ -734,10 +733,6 @@
 	.rate
 		margin-bottom: 15px
 	&__text
-		color: #818181
-		font-size: $text-reg
-		line-height: 1.5
-		margin-bottom: 20px
 		a
 			color: #818181
 			font-style: italic
@@ -753,6 +748,7 @@
 // cart
 .cart
 	margin-bottom: 80px
+	font-size: 0
 	&__title
 		font-size: 24px
 		font-weight: 700
@@ -763,7 +759,6 @@
 			padding: 9px 40px 15px
 	&__item
 		background-color: #f5f5f5
-		font-size: 0
 	&__col
 		padding: 20px 40px
 		position: relative
@@ -790,8 +785,6 @@
 		img
 			display: inline-block
 			vertical-align: middle
-	&__info
-		max-width: 180px
 	&__name
 		font-size: $text-sm
 		font-weight: 700
@@ -856,6 +849,8 @@
 	&__scroll
 		overflow: auto
 		height: 320px
+	.cart__img ~ .cart__info
+		max-width: 170px
 
 // steps
 .steps
