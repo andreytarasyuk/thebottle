@@ -66,6 +66,9 @@
 =r($width)
 	@media only screen and (max-width: $width + px)
 		@content
+=rmin($width)
+	@media (min-width: $width + px)
+		@content
 
 =retina
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)

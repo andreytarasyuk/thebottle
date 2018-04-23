@@ -71,18 +71,24 @@
 	&_search
 		margin-left: 33px
 		padding: 7px
+		+r(767)
+			display: none
 	&_menu
 		width: 32px
 		height: 32px
-		line-height: 32px
 		text-align: center
 		background-color: $pink
 		border-radius: 50%
+		+vertical
+		.icon
+			vertical-align: middle
 		&.active
 			.icon-menu
 				+sprite($s-icon-close)
 	&_next
 		font-size: 0
+		+r(991)
+			display: none
 		span,.icon
 			vertical-align: middle
 		span
@@ -95,6 +101,8 @@
 		display: inline-block
 		vertical-align: middle
 		margin-right: 38px
+		+r(767)
+			display: none
 		span
 			color: $black-lighten
 			font-size: $text-sm
@@ -139,6 +147,7 @@
 		position: fixed
 		right: 100px
 		bottom: 40px
+		display: none
 		z-index: 9991
 		.icon
 			vertical-align: middle

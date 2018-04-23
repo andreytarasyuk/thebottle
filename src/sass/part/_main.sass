@@ -9,12 +9,18 @@
 		left: 50%
 		transform: translateX(-50%)
 		+clr
+		+r(991)
+			bottom: 170px
+			text-align: center
 	.slick
 		&-dots
 			float: left
 			position: relative
 			font-size: 0
 			padding-top: 3px
+			+r(991)
+				padding-top: 0
+				float: none
 	.btn
 		&_next
 			float: right
@@ -34,18 +40,30 @@
 		position: relative
 		z-index: 5
 		min-height: 320px
+		+r(991)
+			min-height: auto
+			height: 200px
+			+vertical
 		&_center
 			text-align: center
 	&__title
 		max-width: 400px
 		display: inline-block
 		padding: 124px 0
+		+r(991)
+			padding: 0
+			display: inline-block
+			vertical-align: middle
 		h2
 			margin-bottom: 0
+			+r(991)
+				line-height: 1.333
 		p
 			padding: 40px 0
 			color: $white
 			margin-bottom: 0
+			+r(991)
+				display: none
 	&__breadcrumbs
 		position: absolute
 		right: 0
@@ -73,6 +91,8 @@
 			writing-mode: vertical-lr
 			display: block
 			white-space: nowrap
+			+r(991)
+				display: none
 			&:before
 				content: ""
 				height: 40px
@@ -85,16 +105,26 @@
 	&__content
 		padding: 185px 0 175px
 		z-index: 5
+		+r(991)
+			padding: 85px 0 60px
 		&_left
 			max-width: 420px
 			float: left
+			+r(991)
+				float: none
+				text-align: center
+				max-width: 100%
 			p
 				color: $white
 				font-size: $text-reg
 				line-height: 1.5
 				margin-bottom: 50px
+				+r(991)
+					margin-bottom: 110px
 			.btn
 				margin-bottom: 30px
+				+r(991)
+					margin-bottom: 0
 	&__label
 		position: absolute
 		right: 0
@@ -106,12 +136,18 @@
 // product
 .product
 	padding: 80px 0
+	+r(991)
+		padding: 60px 0 40px
 
 // banner
 .banner
 	padding: 30px 40px 40px
 	+cover
 	position: relative
+	+r(991)
+		margin-bottom: 20px
+	+r(500)
+		padding: 15px 20px 20px
 	&:before
 		content: ""
 		position: absolute
@@ -133,6 +169,8 @@
 		position: relative
 		z-index: 5
 		min-height: 230px
+		+r(500)
+			min-height: 125px
 	&__buy
 		font-size: $text-sm
 		font-weight: 700
@@ -140,6 +178,8 @@
 		letter-spacing: .2em
 		text-transform: uppercase
 		display: inline-block
+		+r(500)
+			font-size: $text-xs
 	&_position
 		position: absolute
 		right: 0
@@ -154,6 +194,10 @@
 .item
 	height: 480px
 	margin-bottom: 40px
+	+r(767)
+		text-align: center
+	+r(567)
+		margin-bottom: 20px
 	&__wrapper
 		background-color: $white
 		padding: 10px 20px 20px
@@ -164,6 +208,9 @@
 		&:hover
 			box-shadow: 0 0 20px rgba($black, .1)
 			transform: translateY(-10px)
+			+r(991)
+				box-shadow: none
+				transform: none
 			.item__rate
 				opacity: 1
 				height: 20px
@@ -207,6 +254,8 @@
 		height: 0
 		opacity: 0
 		transition: height .3s linear, opacity .3s linear
+		+r(991)
+			display: none
 	&__name
 		font-size: $text-reg
 		line-height: 1.25
@@ -247,11 +296,17 @@
 // box
 .box
 	margin-bottom: 80px
+	+r(991)
+		margin-bottom: 60px
 	+clr
 	&:first-child
 		padding: 0 100px 0 40px
+		+r(991)
+			padding: 0
 	&:last-child
 		padding: 0 40px 0 160px
+		+r(991)
+			padding: 0
 	&__img
 		width: 100%
 		.img
@@ -259,6 +314,8 @@
 	&__content
 		padding-top: 60px
 		+clr
+		+r(991)
+			padding-top: 20px
 		span
 			display: block
 			margin-bottom: 25px
@@ -266,32 +323,65 @@
 			font-weight: 700
 			color: $black-lighten
 			font-size: 32px
+			+r(767)
+				font-size: 24px
+			+r(568)
+				margin-bottom: 15px
 		p
 			margin-bottom: 30px
+			+r(568)
+				margin-bottom: 20px
 	&_left
 		padding: 0 40px 0 100px
+		+r(991)
+			padding: 0
 		.box__img
 			max-width: 42.56%
 			float: left
+			+r(568)
+				float: none
+				max-width: 400px
+				margin: 0 auto 20px
 			.img
 				padding-top: 75%
 		.box__wrapper
 			margin-left: 42.56%
+			+r(568)
+				margin-left: 0
 		.box__content
 			padding-left: 80px
+			+r(991)
+				padding-left: 40px
+			+r(568)
+				padding: 0
 	&_right
 		padding: 0 100px 0 100px
+		+r(991)
+			padding: 0
 		.box__img
 			max-width: 38.64%
 			float: right
+			+r(568)
+				float: none
+				max-width: 400px
+				margin: 0 auto 20px
 			.img
 				padding-top: 88.23%
+				+r(568)
+					padding-top: 75%
 		.box__wrapper
 			float: left
 			width: 100%
 			margin-right: -38.64%
+			+r(568)
+				margin-right: 0
 		.box__content
 			padding-right: 47.72%
+			+r(991)
+				padding-right: 42.32%
+			+r(568)
+				padding: 0
+
 	&__btn
 		letter-spacing: .2em
 		font-size: $text-xs
@@ -300,8 +390,15 @@
 		float: right
 
 .sm-item
+	+r(991)
+		margin-bottom: 30px
 	&_indent
 		padding-left: 15px
+		+r(1120)
+			padding-left: 0
+			margin-left: -10px
+		+r(991)
+			margin-left: 0
 	&__title
 		letter-spacing: .2em
 		color: $pink
@@ -320,6 +417,9 @@
 .simple-item
 	position: relative
 	cursor: pointer
+	padding: 20px 0
+	+r(991)
+		padding-left: 30px
 	&:hover
 		.simple-item__title
 			span
@@ -335,6 +435,8 @@
 		.simple-item__dropdown
 			visibility: visible
 			opacity: 1
+	&__icon
+		height: 70px
 	&__title
 		font-size: 0
 		display: flex
@@ -349,10 +451,12 @@
 			padding: 0 10px 0 40px
 			text-transform: uppercase
 	&__dropdown
-		margin-top: 10px
+		margin-top: -10px
 		visibility: hidden
 		opacity: 0
 		transition: opacity .4s linear, visibility .4s linear
+		+r(1119)
+			display: none
 
 // basket
 .basket
@@ -365,6 +469,9 @@
 		width: 100%
 		padding: 0 40px
 		+clr
+		+r(1119)
+			padding: 0 20px
+			text-align: center
 		p
 			float: left
 			font-weight: 700
@@ -374,15 +481,25 @@
 			color: $black-lighten
 			letter-spacing: .2em
 			padding: 2px 0 2px 65px
+			margin: 0
+			+r(1119)
+				padding: 4px 0
+				float: none
 	&__close
 		float: right
 		font-size: 0
+		+r(1119)
+			position: absolute
+			right: 20px
+			top: 0
 	&__bottom
 		position: absolute
 		bottom: 0
 		left: 0
 		width: 100%
 		padding: 0 40px
+		+r(1119)
+			padding: 0 20px
 	&__btn
 		.btn
 			&:not(:last-child)
@@ -407,10 +524,14 @@
 	&__scroll
 		padding: 70px 0 160px
 		height: 100%
+		+r(1119)
+			padding: 40px 0 160px
 	&__item
 		overflow: auto
 		height: 100%
 		padding: 0 40px
+		+r(1119)
+			padding: 0 20px
 
 // row-item
 .row-item
@@ -465,6 +586,8 @@
 .col-items
 	text-align: center
 	padding: 80px 0 40px
+	+r(991)
+		padding: 60px 0 40px
 	.row
 		font-size: 0
 	&__wrapper
@@ -473,6 +596,10 @@
 		vertical-align: top
 		padding: 0 20px
 		margin-bottom: 40px
+		+r(991)
+			margin-bottom: 20px
+		+r(705)
+			width: 100%
 .col-item
 	padding: 40px
 	text-align: left
@@ -487,6 +614,8 @@
 			color: $white
 		.col-item__btn:before
 			background-color: $black-lighten
+	+r(991)
+		padding: 30px 20px 20px
 	&__title,
 	&__btn,
 	p
@@ -496,6 +625,8 @@
 		width: 80px
 		height: 180px
 		+vertical
+		+r(991)
+			display: none
 		img
 			max-height: 180px
 	&__content
@@ -503,11 +634,17 @@
 		padding-left: 30px
 		position: relative
 		height: 180px
+		+r(991)
+			padding: 0
+			margin: 0
 	&__title
 		font-size: 36px
 		line-height: 0.89
 		font-weight: 700
 		margin-bottom: 24px
+		+r(991)
+			font-size: 24px
+			margin-bottom: 20px
 	p
 		font-size: $text-sm
 		line-height: 1.43
@@ -725,6 +862,8 @@
 		text-align: center
 .review
 	margin-bottom: 55px
+	+r(767)
+		margin-bottom: 40px
 	&__name
 		font-size: 20px
 		font-weight: 700
@@ -910,13 +1049,19 @@
 
 .about
 	padding: 80px 0 25px
+	+r(991)
+		padding: 60px 0 20px
 	.article
 		max-width: 600px
 		margin: 0 auto 45px
+		+r(991)
+			margin-bottom: 30px
 	.reviews
 		padding-bottom: 0
 		.title
 			padding: 25px 0
+			+r(991)
+				padding: 0 0 20px
 			p
 				font-weight: 400
 				margin-top: 20px
@@ -952,19 +1097,29 @@
 // delivery
 .delivery
 	padding-bottom: 35px
+	+r(1119)
+		padding: 10px 0 15px
 
 // contacts
 .contacts
 	padding-bottom: 50px
+	+r(568)
+		padding: 10px 0 40px
 	p a
 		color: $pink
 		font-weight: 700
 	&__wrapper
 		margin-top: 50px
+		+r(568)
+			margin-top: 30px
 		p
 			margin-bottom: 28px
+			+r(568)
+				margin-bottom: 20px
 .contacts-item
 	margin-bottom: 45px
+	+r(568)
+		margin-bottom: 30px
 	&__title
 		font-weight: 700
 		font-size: $text-exmd
