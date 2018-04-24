@@ -208,7 +208,7 @@
 		&:hover
 			box-shadow: 0 0 20px rgba($black, .1)
 			transform: translateY(-10px)
-			+r(991)
+			+r(1119)
 				box-shadow: none
 				transform: none
 			.item__rate
@@ -224,6 +224,8 @@
 		visibility: hidden
 		opacity: 0
 		transition: visibility .3s linear, opacity .3s linear
+		+r(1119)
+			display: none
 	&__sticker
 		position: absolute
 		top: 0
@@ -254,7 +256,7 @@
 		height: 0
 		opacity: 0
 		transition: height .3s linear, opacity .3s linear
-		+r(991)
+		+r(1119)
 			display: none
 	&__name
 		font-size: $text-reg
@@ -669,10 +671,14 @@
 		padding: 80px 0
 	.item__wrapper
 		box-shadow: 0 0 20px rgba(0,0,0,.1)
+		&:hover
+			box-shadow: 0 0 20px rgba(0,0,0,.1)
+
 
 // card
 .card
 	padding: 80px 0
+	display: none
 	&__breadcrumbs
 		margin-bottom: 25px
 		li
@@ -758,10 +764,11 @@
 	&__btn
 		padding-top: 30px
 		font-size: 0
+		+clr
 		.btn_large
 			max-width: 240px
 			margin-right: 40px
-			vertical-align: middle
+			float: left
 // case
 .case
 	box-shadow: 0 0 10px rgba(#0a0f17, .1)
@@ -782,6 +789,8 @@
 	&__wrapper
 		height: 480px
 		position: relative
+		+r(1199)
+			padding-bottom: 20px
 	&__nav
 		width: 90px
 		overflow: auto
@@ -789,9 +798,13 @@
 		position: absolute
 		left: 0
 		top: 0
+		+r(1119)
+			display: none
 	&__for
 		height: 100%
 		padding: 0 110px
+		+r(1119)
+			padding: 0
 	&__item
 		&_small,
 		&_big
@@ -827,26 +840,43 @@
 		font-weight: 700
 		padding: 0
 		margin-bottom: 45px
+		+r(991)
+			font-size: $text-md
+			margin-bottom: 20px
 	.row
 		margin: 0 -60px
+		+r(991)
+			margin: 0 -20px
 		.col
 			padding: 0 60px
+			+r(991)
+				padding: 0 20px
 	.sub-title
 		font-size: $text-exmd
 		letter-spacing: .025em
 		font-weight: 700
 		margin-bottom: 20px
+		+r(991)
+			text-align: center
+			margin-bottom: 10px
+			font-size: $text-reg
 		&_center
 			text-align: center
 	&__grid
 		margin-bottom: 10px
 	&__row
 		margin-bottom: 30px
+		+r(991)
+			margin-bottom: 15px
+		p
+			margin-bottom: 0
 	&__block
 		max-width: 600px
 		width: 100%
 		margin: 0 auto
 		padding-bottom: 35px
+		+r(991)
+			padding-bottom: 20px
 		p
 			margin-bottom: 30px
 
@@ -888,6 +918,7 @@
 .cart
 	margin-bottom: 80px
 	font-size: 0
+	display: none
 	&__title
 		font-size: 24px
 		font-weight: 700
@@ -988,6 +1019,8 @@
 	&__scroll
 		overflow: auto
 		height: 320px
+		+r(1119)
+			height: auto
 	.cart__img ~ .cart__info
 		max-width: 170px
 
@@ -995,6 +1028,8 @@
 .steps
 	font-size: 0
 	padding-bottom: 35px
+	+r(991)
+		padding-bottom: 20px
 .step
 	display: inline-block
 	position: relative
@@ -1002,46 +1037,67 @@
 	&.is-current
 		span
 			color: $black-lighten
-	&:not(:first-child)
-		padding-left: 40px
-		margin-left: 20px
+	&:not(:last-child)
+		padding-right: 40px
+		margin-right: 20px
+		+r(991)
+			padding-right: 0
+			margin-right: 0
 		&:before
 			content: ""
 			background-color: #818181
 			width: 20px
 			height: 1px
 			position: absolute
-			left: 0
+			right: 0
 			top: 50%
+			+r(991)
+				display: none
 	span
 		font-weight: 700
 		font-size: 10px
 		color: #818181
 		letter-spacing: .2em
 		text-transform: uppercase
+		+r(991)
+			font-size: $text-xs
 
 // order
 .order
 	padding: 0 80px
+	+r(1119)
+		padding: 0
 
 // confirmation
 .confirmation
 	font-size: 0
 	padding: 33px 0
+	+r(767)
+		padding: 10px 0 0
 	&_sm
 		max-width: 302px
+		+r(991)
+			max-width: 100%
 	&__item
 		+clr
 		&:not(:last-child)
 			margin-bottom: 13px
+			+r(767)
+				margin-bottom: 25px
 		.label
 			float: left
 			width: 38.1%
+			+r(567)
+				width: 100%
+				margin-bottom: 10px
 		.value
 			padding-left: 5px
 			overflow: hidden
 			color: #818181
 			display: block
+			+r(567)
+				padding: 0
+				overflow: visible
 		.value,
 		.label
 			line-height: 1.29

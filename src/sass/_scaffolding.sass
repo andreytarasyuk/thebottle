@@ -59,7 +59,7 @@ h4
 	padding: 0 20px
 	margin: 0 auto
 	+clr
-	+r(1120)
+	+r(1119)
 		width: 970px
 	+r(991)
 		width: 750px
@@ -110,6 +110,9 @@ h4
 		&-4
 			+r(1119)
 				width: 33.33%
+		&-6
+			+r(1119)
+				width: 50%
 	&-sm
 		&-12
 			+r(991)
@@ -299,7 +302,8 @@ h4
 	bottom: 0
 	z-index: 9999
 	+vertical
-	// display: none
+	overflow-y: auto
+	display: none
 	&__inner
 		display: inline-block
 		vertical-align: middle
@@ -394,6 +398,8 @@ h4
 	padding: 80px 20px 20px 0
 	background-color: #f5f5f5
 	position: relative
+	+r(991)
+		display: none
 	&:before
 		content: ""
 		position: absolute
@@ -539,6 +545,8 @@ input[type="radio"]
 .sorting
 	margin-bottom: 20px
 	+clr
+	+r(991)
+		display: none
 	&__title
 		float: left
 		margin: 0 40px 20px 0
@@ -576,6 +584,8 @@ input[type="radio"]
 		background-color: $black-lighten
 		font-size: 0
 		margin-bottom: 70px
+		+r(991)
+			margin-bottom: 40px
 	&__control
 		width: 33.33%
 		display: inline-block
@@ -588,10 +598,9 @@ input[type="radio"]
 		font-weight: 700
 		color: #9ea2a8
 		position: relative
-		&.active
-			color: $white
-			&:before
-				display: block
+		+r(991)
+			width: 100%
+			display: none
 		&:before
 			content: ""
 			position: absolute
@@ -600,6 +609,22 @@ input[type="radio"]
 			margin-left: -8px
 			+arr(16, 8, $black-lighten, b)
 			display: none
+		&:after
+			content: ""
+			position: absolute
+			+sprite($s-icon-tab-arrow)
+			right: 9px
+			top: 50%
+			transform: translateY(-50%)
+			display: none
+			+r(991)
+				display: block
+		&.active
+			color: $white
+			+r(991)
+				display: block
+			&:before
+				display: block
 	&__item
 		display: none
 		&.active
@@ -612,14 +637,12 @@ input[type="radio"]
 		padding-top: 17px
 		&_right
 			text-align: right
+			+r(767)
+				text-align: center
 	&__link
 		text-decoration: underline
 		&:hover
 			text-decoration: none
-	.btn
-		margin-top: 5px
-		+r(767)
-			margin-top: 0
 .form-indent
 	.form__row
 		margin: 0 -80px
@@ -635,19 +658,37 @@ input[type="radio"]
 				padding: 0 20px
 .form-step
 	margin-bottom: 80px
+	+r(767)
+		margin-bottom: 60px
 	.form__row
 		margin: 0 -40px
+		+r(991)
+			margin: 0 -20px
 		.form__col
 			padding: 0 40px
+			+r(991)
+				padding: 0 20px
+			&_right
+				float: right
+	.row
+		+r(767)
+			margin: 0 -10px
+		.col
+			+r(767)
+				padding: 0 10px
 .form-item
 	margin-bottom: 35px
 	font-size: 0
 	+r(767)
-		margin-bottom: 20px
+		margin-bottom: 25px
 	&__title
 		padding: 0
 		margin-bottom: 15px
 		font-size: $text-exmd
 		font-weight: 700
 		letter-spacing: .025em
-
+		+r(767)
+			font-size: $text-reg
+	&__checkbox
+		+r(767)
+			padding-top: 25px

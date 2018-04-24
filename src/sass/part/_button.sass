@@ -128,7 +128,7 @@
 	&-add
 		font-size: 0
 		display: inline-block
-		padding: 10px 0
+		padding: 18px 0
 		span,
 		.icon
 			display: inline-block
@@ -147,7 +147,13 @@
 		position: fixed
 		right: 100px
 		bottom: 40px
-		display: none
 		z-index: 9991
+		+r(991)
+			position: relative
+			right: 0
+			bottom: 0
+			top: 16px
+			display: block
+			margin: 0 auto
 		.icon
 			vertical-align: middle
