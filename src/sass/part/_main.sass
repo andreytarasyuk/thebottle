@@ -678,7 +678,10 @@
 // card
 .card
 	padding: 80px 0
-	// display: none
+	&__case
+		width: 50%
+		float: left
+		padding: 0 15px
 	&__breadcrumbs
 		margin-bottom: 25px
 		li
@@ -688,13 +691,25 @@
 					color: $black-lighten
 			a
 				color: #818181
-	&__content
+	&__content,
+	&__top
+		float: right
+		width: 50%
+		padding: 0 15px
+		+r(991)
+			width: 100%
+	&__top
 		padding-top: 10px
+		+r(991)
+			padding-top: 0
 	&__title
 		font-size: 36px
 		letter-spacing: .025em
 		font-weight: 700
 		margin-bottom: 30px
+		+r(991)
+			font-size: 24px
+			margin-bottom: 20px
 	&__rate
 		margin-bottom: 40px
 		font-size: 0
