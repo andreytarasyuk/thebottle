@@ -33,16 +33,31 @@ title: card
 					</div>
 					<div class="card__case">
 						<div class="case">
-							<div class="case__wrapper">
-								<div class="case__nav">
-									<a href="#" class="case__item case__item_small active">
+							<div class="case__slider">
+								<div class="case__nav js-slider-nav">
+									<div class="case__item case__item_small active">
 										<img src="img/img-case-small-00.png" alt="img">
-									</a>
-									<a href="#" class="case__item case__item_small">
+									</div>
+									<div class="case__item case__item_small">
 										<img src="img/img-case-small-01.png" alt="img">
-									</a>
+									</div>
+									<div class="case__item case__item_small">
+										<img src="img/img-case-small-01.png" alt="img">
+									</div>
+									<div class="case__item case__item_small">
+										<img src="img/img-case-small-01.png" alt="img">
+									</div>
 								</div>
-								<div class="case__for">
+								<div class="case__for js-slider-for">
+									<div class="case__item case__item_big">
+										<img src="img/img-case-big-00.png" alt="img">
+									</div>
+									<div class="case__item case__item_big">
+										<img src="img/img-case-big-00.png" alt="img">
+									</div>
+									<div class="case__item case__item_big">
+										<img src="img/img-case-big-00.png" alt="img">
+									</div>
 									<div class="case__item case__item_big">
 										<img src="img/img-case-big-00.png" alt="img">
 									</div>
@@ -54,7 +69,7 @@ title: card
 					<div class="card__content">
 						<div class="card__des">
 							<div class="row">
-								<div class="col col-6">
+								<div class="col col-6 col-xxs-12">
 									<ul class="card__list">
 										<li><span class="left">Регион:</span><span class="right">США</span></li>
 										<li><span class="left">Бренд:</span><span class="right">Jack Daniel’s</span></li>
@@ -62,23 +77,27 @@ title: card
 										<li><span class="left">Крепость:</span><span class="right">35%</span></li>
 									</ul>
 								</div>
-								<div class="col col-6">
+								<div class="col col-6 col-xxs-12">
 									<div class="card__selects">
 										<div class="card__select">
-											<select class="select">
-												<option>0.7 литров</option>
-												<option>1 литр</option>
-												<option>2 литра</option>
-											</select>
-											<span>Объем:</span>
+											<div class="card__select_item">
+												<select class="select js-select" style="width: 100%;">
+													<option>0.7 литров</option>
+													<option>1 литр</option>
+													<option>2 литра</option>
+												</select>
+											</div>
+											<span class="label">Объем:</span>
 										</div>
 										<div class="card__select">
-											<select class="select">
-												<option>1 бутылка</option>
-												<option>2 бутылки</option>
-												<option>3 бутылки</option>
-											</select>
-											<span>Количество:</span>
+											<div class="card__select_item">
+												<select class="select js-select" style="width: 100%;">
+													<option>1 бутылка</option>
+													<option>2 бутылки</option>
+													<option>3 бутылки</option>
+												</select>
+											</div>
+											<span class="label">Количество:</span>
 										</div>
 									</div>
 								</div>
@@ -107,50 +126,54 @@ title: card
 		<div class="tabs js-tabs">
 			<div class="inner">
 				<div class="tabs__controls">
-					<a href="#" class="tabs__control active" data-tab="1">описание товара</a>
-					<a href="#" class="tabs__control" data-tab="2">история бренда</a>
-					<a href="#" class="tabs__control" data-tab="3">сочетаемость с едой</a>
+					<button class="tabs__button tabs__button_left js-tabs-prev"><i class="icon icon-tab-arrow"></i></button>
+					<button class="tabs__button tabs__button_right js-tabs-next"><i class="icon icon-tab-arrow"></i></button>
+					<a href="#" class="tabs__control js-tabs-control active" data-tab="1">описание товара</a>
+					<a href="#" class="tabs__control js-tabs-control" data-tab="2">история бренда</a>
+					<a href="#" class="tabs__control js-tabs-control" data-tab="3">сочетаемость с едой</a>
 				</div>
 				<div class="tabs__content">
-					<div class="tabs__item active" data-content="1">
-						<div class="description">
-							<div class="title title_center">Дегустационные заметки</div>
-							<div class="description__grid">
-								<div class="row">
-									<div class="col col-6 col-sm-12">
-										<div class="description__row">
-											<div class="sub-title">Аромат</div>
-											<p>Виски имеет очень мягкий аромат с ярко выраженными нотками меда, пряностей, корицы и цветов.</p>
-										</div>
-										<div class="description__row">
-											<div class="sub-title">Цвет</div>
-											<p>Виски янтарного цвета с золотыми отблесками.</p>
-										</div>
-									</div>
-									<div class="col col-6 col-sm-12">
-										<div class="description__row">
-											<div class="sub-title">Вкус</div>
-											<p>Виски обладает легким вкусом с тонами меда, ириски и груши, легкими нюансами бадьяна.</p>
-										</div>
-										<div class="description__row">
-											<div class="sub-title">Употребление</div>
-											<p>Виски рекомендуется употреблять в чистом виде немного охлажденным, со льдом или добавлять в кофе.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="description__block">
-								<div class="title title_center">Интересные факты</div>
-								<div class="sub-title sub-title_center">Виски</div>
-								<p>"Jack Daniels" Tennessee Honey — это смесь виски "Джек Дэниэлс" и медового ликера. Напиток является одним из наиболее захватывающих в мире виски. "Джек Дэниэлс" Теннесси Хани обладает янтарным цветом с золотистыми отблесками и больше напоминает по цвету бутылку с медом.</p>
-								<p>Этот виски является самым употребляемым среди всех, которые изготавливаются на основе ликеров. Он весьма сладкий, но не приторный. Сладость напитка уравновешена необходимым количеством корицы и специй. Этот напиток порадует как сильный пол, так и прекрасных дам.</p>
-								<div class="sub-title sub-title_center">Jack Daniels</div>
-								<p>О виски Jack Daniels можно говорить бесконечно долго, ведь это действительно уникальный напиток. Для него одного выделили категорию виски "теннесси", к которой относятся напитки, фильтруемые через уголь сахарного клена. Только для виски Джек Дэниэлс применяется особая технология производства. Исходное сырье всё то же — это пшеница, рожь, ячмень.</p>
-								<p>Брожение виски Jack Daniels происходит на кислом сусле, но самое интересное — это процесс фильтрации. Для холодной фильтрации спиртов применяется уголь сахарного клена толщиной в 3 метра. Причем фильтрация происходит до помещения спиртов в бочки, а не перед разливом в бутылки. Таким образом, в обожженных изнутри бочках выдерживается уже отфильтрованный, чистый виски, который насыщается ароматами и оттенками дерева. </p>
-								<p>Производители этого виски говорят, что не смотрят на календарь — только дегустаторы определяют, когда он готов к разливу по бутылкам. Именно Джек Дэниэлс называют виски, а не бурбон, хотя он на 80% состоит из кукурузных спиртов. Такое различие обусловлено именно процессом фильтрации, придающим виски особенно мягкий и чистый вкус.</p>
-							</div>
-						</div>
-					</div>
+					{% for item in range(0,3) %}
+					    <div class="tabs__item js-tabs-content active" data-content="{{loop.index}}">
+					    	<div class="description">
+					    		<div class="title title_center">Дегустационные заметки {{loop.index}}</div>
+					    		<div class="description__grid">
+					    			<div class="row">
+					    				<div class="col col-6 col-sm-12">
+					    					<div class="description__row">
+					    						<div class="sub-title">Аромат</div>
+					    						<p>Виски имеет очень мягкий аромат с ярко выраженными нотками меда, пряностей, корицы и цветов.</p>
+					    					</div>
+					    					<div class="description__row">
+					    						<div class="sub-title">Цвет</div>
+					    						<p>Виски янтарного цвета с золотыми отблесками.</p>
+					    					</div>
+					    				</div>
+					    				<div class="col col-6 col-sm-12">
+					    					<div class="description__row">
+					    						<div class="sub-title">Вкус</div>
+					    						<p>Виски обладает легким вкусом с тонами меда, ириски и груши, легкими нюансами бадьяна.</p>
+					    					</div>
+					    					<div class="description__row">
+					    						<div class="sub-title">Употребление</div>
+					    						<p>Виски рекомендуется употреблять в чистом виде немного охлажденным, со льдом или добавлять в кофе.</p>
+					    					</div>
+					    				</div>
+					    			</div>
+					    		</div>
+					    		<div class="description__block">
+					    			<div class="title title_center">Интересные факты</div>
+					    			<div class="sub-title sub-title_center">Виски</div>
+					    			<p>"Jack Daniels" Tennessee Honey — это смесь виски "Джек Дэниэлс" и медового ликера. Напиток является одним из наиболее захватывающих в мире виски. "Джек Дэниэлс" Теннесси Хани обладает янтарным цветом с золотистыми отблесками и больше напоминает по цвету бутылку с медом.</p>
+					    			<p>Этот виски является самым употребляемым среди всех, которые изготавливаются на основе ликеров. Он весьма сладкий, но не приторный. Сладость напитка уравновешена необходимым количеством корицы и специй. Этот напиток порадует как сильный пол, так и прекрасных дам.</p>
+					    			<div class="sub-title sub-title_center">Jack Daniels</div>
+					    			<p>О виски Jack Daniels можно говорить бесконечно долго, ведь это действительно уникальный напиток. Для него одного выделили категорию виски "теннесси", к которой относятся напитки, фильтруемые через уголь сахарного клена. Только для виски Джек Дэниэлс применяется особая технология производства. Исходное сырье всё то же — это пшеница, рожь, ячмень.</p>
+					    			<p>Брожение виски Jack Daniels происходит на кислом сусле, но самое интересное — это процесс фильтрации. Для холодной фильтрации спиртов применяется уголь сахарного клена толщиной в 3 метра. Причем фильтрация происходит до помещения спиртов в бочки, а не перед разливом в бутылки. Таким образом, в обожженных изнутри бочках выдерживается уже отфильтрованный, чистый виски, который насыщается ароматами и оттенками дерева. </p>
+					    			<p>Производители этого виски говорят, что не смотрят на календарь — только дегустаторы определяют, когда он готов к разливу по бутылкам. Именно Джек Дэниэлс называют виски, а не бурбон, хотя он на 80% состоит из кукурузных спиртов. Такое различие обусловлено именно процессом фильтрации, придающим виски особенно мягкий и чистый вкус.</p>
+					    		</div>
+					    	</div>
+					    </div>
+					{% endfor %}
 				</div>
 			</div>
 		</div>
@@ -160,38 +183,40 @@ title: card
 		<div class="reviews">
 			<div class="inner">
 				<div class="title title_center">Отзывы о покупке</div>
-				<div class="row">
-					<div class="col col-6">
-						<div class="review">
-							<div class="review__name">Дмитрий Чупрун</div>
-							<ul class="rate">
-								<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-								<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-								<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-								<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-								<li><a href="#"><i class="icon icon-star"></i></a></li>
-							</ul>
-							<p class="review__text">Один из лучших виски. Люблю пробовать новое. Но регулярно возвращаюсь к старине Джеку</p>
-							<div class="review__data">25.05.2017</div>
+				<div class="reviews__slider">
+					<div class="js-slider-reviews">
+						<div class="slider-item">
+							<div class="review">
+								<div class="review__name">Дмитрий Чупрун</div>
+								<ul class="rate">
+									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+									<li><a href="#"><i class="icon icon-star"></i></a></li>
+								</ul>
+								<p class="review__text">Один из лучших виски. Люблю пробовать новое. Но регулярно возвращаюсь к старине Джеку</p>
+								<div class="review__data">25.05.2017</div>
+							</div>
 						</div>
-					</div>
-					<div class="col col-6">
-						<div class="review">
-							<div class="review__name">Дмитрий Чупрун</div>
-							<ul class="rate">
-								<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-								<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-								<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-								<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-								<li><a href="#"><i class="icon icon-star"></i></a></li>
-							</ul>
-							<p class="review__text">Перебор с медом - сделали какой-то ликер из хорошего вискаря. Имхо, конечно, но в хороший кофе я бы его точно не добавлял. М.б. это американская мода ... <a href="#">Читать далее</a></p>
-							<div class="review__data">25.05.2017</div>
+						<div class="slider-item">
+							<div class="review">
+								<div class="review__name">Дмитрий Чупрун</div>
+								<ul class="rate">
+									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+									<li><a href="#"><i class="icon icon-star"></i></a></li>
+								</ul>
+								<p class="review__text">Перебор с медом - сделали какой-то ликер из хорошего вискаря. Имхо, конечно, но в хороший кофе я бы его точно не добавлял. М.б. это американская мода ... <a href="#">Читать далее</a></p>
+								<div class="review__data">25.05.2017</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="reviews__btn">
-					<a href="#" class="btn btn_small btn_black"><span>оценить и оставить отзыв</span></a>
+					<a href="#" class="btn btn_small btn_black js-modal-control" data-target="comment"><span>оценить и оставить отзыв</span></a>
 				</div>
 			</div>
 		</div>
@@ -312,10 +337,10 @@ title: card
 		<!-- popular END -->
 
 		<!-- popup BEGIN -->
-		<div class="popup">
+		<div class="popup js-modal" data-modal="comment">
 			<div class="inner popup__inner">
 				<div class="popup__content">
-					<a href="#" class="btn-close"><i class="icon icon-close"></i></a>
+					<a href="#" class="btn-close js-modal-control" data-target="comment"><i class="icon icon-close"></i></a>
 					<!-- form BEGIN -->
 					<form action="/" class="form form-indent">
 						<div class="row form__row">
@@ -353,12 +378,14 @@ title: card
 			</div>
 		</div>
 		<!-- popup END -->
+		{% include "partials/_basket-modal.html" %}
 		{% include "partials/_footer.html" %}
 	</div>
 
 	<!-- script begin -->
 	<script src="js/vendor/jquery-3.1.1.min.js"></script>
 	<script src="js/vendor/slick.min.js"></script>
+	<script src="js/vendor/select2.min.js"></script>
 	<script src="js/app.js"></script>
 	<!-- script end -->
 

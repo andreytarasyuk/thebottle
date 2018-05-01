@@ -4,9 +4,6 @@ body
 	color: $black-lighten
 	+font-family($exo)
 	font-weight: 400
-	&.popup-open
-		overflow: hidden
-		padding-right: 17px
 p,a,span,input,h1,h2,h3,h4,h5,h6
 	letter-spacing: .025em
 a
@@ -182,6 +179,7 @@ h4
 		a
 			padding: 0 3px
 			display: inline-block
+			outline: none
 	&_big
 		margin: 0 -5px
 		li
@@ -224,7 +222,6 @@ h4
 		max-width: 206px
 		display: inline-block
 		width: 100%
-		form
 		.input
 			border: none
 			border-bottom: 1px solid $black-lighten
@@ -303,7 +300,12 @@ h4
 	z-index: 9999
 	+vertical
 	overflow-y: auto
-	display: none
+	opacity: 0
+	visibility: hidden
+	transition: opacity .3s linear, visibility .3s linear
+	&.is-open
+		visibility: visible
+		opacity: 1
 	&__inner
 		display: inline-block
 		vertical-align: middle
@@ -395,23 +397,65 @@ h4
 
 // aside
 .aside
-	padding: 80px 20px 20px 0
-	background-color: #f5f5f5
-	position: relative
 	+r(991)
-		display: none
-	&:before
-		content: ""
-		position: absolute
+		position: fixed
+		left: 0
 		top: 0
-		right: 100%
-		height: 100%
-		width: 3000px
+		right: 0
+		bottom: 0
+		z-index: 555
+		background-color: rgba($black, .5)
+		opacity: 0
+		visibility: hidden
+		transition: opacity .3s linear, visibility .3s linear
+	&.is-open
+		+r(991)
+			opacity: 1
+			visibility: visible
+	&__wrapper
+		padding: 80px 20px 20px 0
 		background-color: #f5f5f5
+		position: relative
+		+r(991)
+			padding: 0
+			width: 260px
+			height: 100%
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			right: 100%
+			height: 100%
+			width: 3000px
+			background-color: #f5f5f5
+	&__scroll
+		+r(991)
+			overflow: auto
+			height: 100%
+			padding: 0 20px
+	&__body
+		+r(991)
+			padding: 50px 0 0
+			height: 100%
 	&__title
 		font-weight: 700
 		font-size: $text-exmd
 		margin: -5px 0 15px 0
+		+r(991)
+			margin: 0
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			padding: 20px 20px 0
+			font-size: 16px
+	&__btn
+		position: absolute
+		right: 20px
+		top: 20px
+		display: none
+		+r(991)
+			display: block
 
 // checkbox
 .checkbox
@@ -476,24 +520,31 @@ input[type="radio"]
 
 // select
 .select
+	&_lg
+		.select2-container--default .select2-selection--single
+			height: 50px
+			padding: 10px 8px
+			width: 100%
+			font-size: $text-reg
+			border: 1px solid #818181
+.select2-container--default .select2-selection--single
 	background-color: #f5f5f5
 	border: none
 	+font-family($exo)
-	padding: 6px 15px
+	padding: 1px 8px
 	height: 30px
-	-webkit-appearance: none
 	outline: none
 	cursor: pointer
 	border-radius: 2px
-	&:focus
-		border-color: $black-lighten
-	&_lg
-		height: 50px
-		width: 100%
-		font-size: $text-reg
-		padding: 4px 20px 6px
-		border: 1px solid #818181
-
+.select2-container--default .select2-selection--single .select2-selection__arrow b
+	border-color: $black-lighten transparent transparent transparent
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+	border-color: transparent transparent $black-lighten transparent
+.select2-dropdown
+	border: none
+	box-shadow: 0 2px 5px rgba(10,15,23,.1)
+.select2-container--default .select2-selection--single .select2-selection__arrow
+	height: 100%
 
 // filter
 .filter
@@ -545,7 +596,12 @@ input[type="radio"]
 .sorting
 	margin-bottom: 20px
 	+clr
-	+r(991)
+	+rmin(992)
+		display: block !important
+	+r(767)
+		padding: 25px 0
+		background-color: #f5f5f5
+		margin: -39px -20px 20px
 		display: none
 	&__title
 		float: left
@@ -554,14 +610,25 @@ input[type="radio"]
 		font-weight: 700
 		font-size: $text-xs
 		text-transform: uppercase
+		+r(767)
+			display: none
 	&__list
-		margin: 0 -20px 10px
+		margin: 0 -20px
 		padding-top: 2px
 		float: left
 		font-size: 0
+		+r(767)
+			float: none
 		li
 			display: inline-block
 			padding: 0 20px
+			margin-bottom: 10px
+			+r(767)
+				margin-bottom: 15px
+			+r(767)
+				display: block
+				margin-right: 0
+				text-align: center
 			&.active
 				a
 					color: $pink
@@ -580,10 +647,12 @@ input[type="radio"]
 
 // tabs
 .tabs
+	overflow: hidden
 	&__controls
 		background-color: $black-lighten
 		font-size: 0
 		margin-bottom: 70px
+		position: relative
 		+r(991)
 			margin-bottom: 40px
 	&__control
@@ -609,22 +678,34 @@ input[type="radio"]
 			margin-left: -8px
 			+arr(16, 8, $black-lighten, b)
 			display: none
-		&:after
-			content: ""
-			position: absolute
-			+sprite($s-icon-tab-arrow)
-			right: 9px
-			top: 50%
-			transform: translateY(-50%)
-			display: none
-			+r(991)
-				display: block
 		&.active
 			color: $white
 			+r(991)
 				display: block
 			&:before
 				display: block
+	&__button
+		display: none
+		background-color: transparent
+		position: absolute
+		z-index: 10
+		top: 0
+		bottom: 0
+		padding: 0 10px
+		+vertical
+		&_left
+			left: 0
+			transform: rotate(180deg)
+		&_right
+			right: 0
+		+r(991)
+			display: block
+		&.hidden 
+			display: none
+			+r(991)
+				display: none
+		.icon 
+			vertical-align: middle
 	&__item
 		display: none
 		&.active
@@ -692,3 +773,7 @@ input[type="radio"]
 	&__checkbox
 		+r(767)
 			padding-top: 25px
+
+// scrollbar
+.ps__thumb-y
+	background-color: $black-lighten

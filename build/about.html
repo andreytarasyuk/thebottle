@@ -11,17 +11,19 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 	<!-- Libs stylesheet -->
+	<link rel="stylesheet" media="all" href="css/perfect-scrollbar.css">
+	<link rel="stylesheet" media="all" href="css/select2.min.css">
 	<link rel="stylesheet" media="all" href="css/style.min.css">
 </head>
 
 <body>
 	<div class="out">
 		<!-- header BEGIN -->
-<header class="header">
+<header class="header js-accordion">
 	<div class="inner">
 		<div class="header__wrapper">
 			<div class="header__left">
-				<a href="#" class="header__btn btn_menu"><i class="icon icon-menu"></i></a>
+				<a href="#" class="header__btn btn_menu js-accordion-btn"><i class="icon icon-menu"></i></a>
 				<a href="#" class="header__btn btn_search"><i class="icon icon-search"></i></a>
 			</div>
 			<a href="index.html" class="logo header__logo"><img src="img/logo.png" alt="THEBOTTLE"></a>
@@ -29,14 +31,14 @@
 				<a href="#" class="btn_login">
 					<span>войти</span>
 				</a>
-				<a href="#" class="btn_basket">
+				<a href="#" class="btn_basket js-modal-control" data-target="basket">
 					<i class="icon icon-login"></i>
 					<span class="number">3</span>
 				</a>
 			</div>
 		</div>
 	</div>
-	<div class="menu header__menu">
+	<div class="menu header__menu js-accordion-item">
 		<div class="inner">
 			<div class="row">
 				<div class="col col-3 col-sm-6 col-xxs-12">
@@ -164,63 +166,63 @@
 						Отзывы и оценки покупателей
 						<p>Наши покупатели оставили <strong>3 715</strong> отзывов и поставили более <strong>12 839</strong> оценок различным напиткам.</p>
 					</div>
-					<div class="row">
-						<div class="col col-6 col-xs-12">
-							<div class="review">
-								<div class="review__name">Дмитрий Чупрун</div>
-								<ul class="rate">
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li><a href="#"><i class="icon icon-star"></i></a></li>
-								</ul>
-								<p class="review__text">Один из лучших виски. Люблю пробовать новое. Но регулярно возвращаюсь к старине Джеку</p>
-								<div class="review__data">25.05.2017</div>
+					<div class="reviews__slider">
+						<div class="js-slider-reviews">
+							<div class="slider-item">
+								<div class="review">
+									<div class="review__name">Дмитрий Чупрун</div>
+									<ul class="rate">
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li><a href="#"><i class="icon icon-star"></i></a></li>
+									</ul>
+									<p class="review__text">Один из лучших виски. Люблю пробовать новое. Но регулярно возвращаюсь к старине Джеку</p>
+									<div class="review__data">25.05.2017</div>
+								</div>
 							</div>
-						</div>
-						<div class="col col-6 col-xs-12">
-							<div class="review">
-								<div class="review__name">Дмитрий Чупрун</div>
-								<ul class="rate">
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li><a href="#"><i class="icon icon-star"></i></a></li>
-								</ul>
-								<p class="review__text">Перебор с медом - сделали какой-то ликер из хорошего вискаря. Имхо, конечно, но в хороший кофе я бы его точно не добавлял. М.б. это американская мода ... <a href="#">Читать далее</a></p>
-								<div class="review__data">25.05.2017</div>
+							<div class="slider-item">
+								<div class="review">
+									<div class="review__name">Дмитрий Чупрун</div>
+									<ul class="rate">
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li><a href="#"><i class="icon icon-star"></i></a></li>
+									</ul>
+									<p class="review__text">Перебор с медом - сделали какой-то ликер из хорошего вискаря. Имхо, конечно, но в хороший кофе я бы его точно не добавлял. М.б. это американская мода ... <a href="#">Читать далее</a></p>
+									<div class="review__data">25.05.2017</div>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col col-6 col-xs-12">
-							<div class="review">
-								<div class="review__name">Дмитрий Чупрун</div>
-								<ul class="rate">
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li><a href="#"><i class="icon icon-star"></i></a></li>
-								</ul>
-								<p class="review__text">Один из лучших виски. Люблю пробовать новое. Но регулярно возвращаюсь к старине Джеку</p>
-								<div class="review__data">25.05.2017</div>
+							<div class="slider-item">
+								<div class="review">
+									<div class="review__name">Дмитрий Чупрун</div>
+									<ul class="rate">
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li><a href="#"><i class="icon icon-star"></i></a></li>
+									</ul>
+									<p class="review__text">Один из лучших виски. Люблю пробовать новое. Но регулярно возвращаюсь к старине Джеку</p>
+									<div class="review__data">25.05.2017</div>
+								</div>
 							</div>
-						</div>
-						<div class="col col-6 col-xs-12">
-							<div class="review">
-								<div class="review__name">Дмитрий Чупрун</div>
-								<ul class="rate">
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
-									<li><a href="#"><i class="icon icon-star"></i></a></li>
-								</ul>
-								<p class="review__text">Перебор с медом - сделали какой-то ликер из хорошего вискаря. Имхо, конечно, но в хороший кофе я бы его точно не добавлял. М.б. это американская мода ... <a href="#">Читать далее</a></p>
-								<div class="review__data">25.05.2017</div>
+							<div class="slider-item">
+								<div class="review">
+									<div class="review__name">Дмитрий Чупрун</div>
+									<ul class="rate">
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li class="active"><a href="#"><i class="icon icon-star"></i></a></li>
+										<li><a href="#"><i class="icon icon-star"></i></a></li>
+									</ul>
+									<p class="review__text">Перебор с медом - сделали какой-то ликер из хорошего вискаря. Имхо, конечно, но в хороший кофе я бы его точно не добавлял. М.б. это американская мода ... <a href="#">Читать далее</a></p>
+									<div class="review__data">25.05.2017</div>
+								</div>
 							</div>
 						</div>
 					</div>

@@ -531,6 +531,7 @@
 	&__item
 		overflow: auto
 		height: 100%
+		position: relative
 		padding: 0 40px
 		+r(1119)
 			padding: 0 20px
@@ -572,13 +573,13 @@
 		width: 100%
 		margin-bottom: 20px
 		+clr
-		span
+		.label
 			display: inline-block
 			padding-top: 8px
 	&__select
+		position: relative
 		float: right
-		.select
-			width: 60px
+		width: 60px
 	&__price
 		color: $pink
 		font-weight: 700
@@ -667,21 +668,66 @@
 // subcategory
 .subcategory
 	overflow: hidden
+	position: relative
 	&_right
 		padding: 80px 0
+		+r(991)
+			padding: 40px 0
 	.item__wrapper
 		box-shadow: 0 0 20px rgba(0,0,0,.1)
 		&:hover
 			box-shadow: 0 0 20px rgba(0,0,0,.1)
+	&__btns
+		background-color: #f5f5f5
+		padding: 10px 0
+		font-size: 0
+		display: none
+		+r(991)
+			display: block
+			.col
+				padding: 0
+	&__btn
+		width: 50%
+		font-size: 12px
+		padding: 14px 0
+		font-weight: 700
+		letter-spacing: .2em
+		display: inline-block
+		vertical-align: top
+		text-transform: uppercase
+		text-align: center
+		position: relative
+		&:after
+			content: ""
+			display: inline-block
+			vertical-align: top
+			margin: 5px 0 0 7px
+			+arr(6, 4, $black-lighten, b)
+		&:first-child
+			&:before
+				content: ""
+				height: 100%
+				width: 1px
+				background-color: #FFF
+				position: absolute
+				right: 0
+				top: 0
 
 
 // card
 .card
 	padding: 80px 0
+	overflow: hidden
+	+r(991)
+		padding: 60px 0
 	&__case
 		width: 50%
 		float: left
 		padding: 0 15px
+		+r(991)
+			width: 	100%
+			margin-bottom: 25px
+			padding: 0 20px
 	&__breadcrumbs
 		margin-bottom: 25px
 		li
@@ -698,6 +744,7 @@
 		padding: 0 15px
 		+r(991)
 			width: 100%
+			padding: 0 20px
 	&__top
 		padding-top: 10px
 		+r(991)
@@ -728,12 +775,16 @@
 			+clr
 			&:not(:last-child)
 				margin-bottom: 20px
+				+r(568)
+					margin-bottom: 15px
 			span
 				font-size: $text-sm
 			.left
 				width: 100px
 				word-wrap: break-word
 				float: left
+				+r(568)
+					width: 135px
 			.right
 				color: #818181
 				overflow: hidden
@@ -745,25 +796,37 @@
 		+clr
 		&:not(:last-child)
 			margin-bottom: 40px
-		span
+			+r(568)
+				margin-bottom: 20px
+		.label
 			display: block
 			overflow: hidden
 			padding: 10px 5px 0 0
 			word-wrap: break-word
-		.select
+		&_item
 			float: right
-			width: 118px
+			width: 118px 
+			+r(568)
+				width: 140px 
 	&__price
 		font-size: 0
 		padding-top: 45px
+		+r(568)
+			padding-top: 25px
+			text-align: center
 		&_default
 			margin-right: 15px
 			font-size: 36px
 			color: $pink
+			+r(568)
+				font-size: 24px
 		&_old
 			font-size: 24px
 			position: relative
 			top: -2px
+			+r(568)
+				font-size: 18px
+				top: 0
 			&:before
 				content: ""
 				position: absolute
@@ -779,16 +842,26 @@
 	&__btn
 		padding-top: 30px
 		font-size: 0
+		+r(568)
+			padding-top: 5px
+			text-align: center
 		+clr
 		.btn_large
 			max-width: 240px
 			margin-right: 40px
 			float: left
+			+r(568)
+				float: none
+				margin: 0 auto 
+				display: block
+				max-width: 280px
 // case
 .case
 	box-shadow: 0 0 10px rgba(#0a0f17, .1)
 	position: relative
-	padding: 20px
+	padding: 20px 20px 10px
+	.slick-dots
+		text-align: left
 	&__sticker
 		position: absolute
 		top: 0
@@ -801,18 +874,15 @@
 		padding: 18px 19px
 		&_orange
 			background-color: $orange
-	&__wrapper
-		height: 480px
+	&__slider
 		position: relative
-		+r(1199)
-			padding-bottom: 20px
 	&__nav
 		width: 90px
-		overflow: auto
 		height: 100%
 		position: absolute
 		left: 0
 		top: 0
+		z-index: 444
 		+r(1119)
 			display: none
 	&__for
@@ -824,6 +894,7 @@
 		&_small,
 		&_big
 			overflow: hidden
+			outline: none
 			+vertical
 		&_small
 			height: 120px
@@ -831,18 +902,23 @@
 			display: block
 			padding: 5px
 			transition: border-color .3s linear
+			cursor: pointer
 			&:not(:last-child)
 				margin-bottom: 10px
-			&.active
+			&.slick-active
 				border-color: $black-lighten
 			img
 				max-height: 100px
 				display: inline-block
 				vertical-align: middle
 		&_big
-			height: 100%
+			height: 480px
+			padding-bottom: 20px
+			+r(520)
+				height: 220px
 			img
-				max-height: 440px
+				max-height: 100%
+				max-width: 100%
 				display: inline-block
 				vertical-align: middle
 
@@ -905,9 +981,19 @@
 		letter-spacing: .025em
 	&__btn
 		text-align: center
+		+r(768)
+			margin-top: 30px
+	&__slider
+		margin: 0 -20px
+		+clr
+	.slider-item
+		outline: none
+		float: left
+		width: 50%
+		padding: 0 20px
 .review
 	margin-bottom: 55px
-	+r(767)
+	+r(768)
 		margin-bottom: 40px
 	&__name
 		font-size: 20px
@@ -933,22 +1019,60 @@
 .cart
 	margin-bottom: 80px
 	font-size: 0
-	// display: none
+	+r(991)
+		margin-bottom: 	60px
 	&__title
 		font-size: 24px
 		font-weight: 700
 		letter-spacing: .025em
+		+r(991)
+			font-size: 18px
+			margin-bottom: 30px
 	&__head
 		text-align: right
+		+r(991)
+			display: none
 		.cart__col
 			padding: 9px 40px 15px
 	&__item
 		background-color: #f5f5f5
+		position: relative
+		+r(991)
+			padding: 10px 10px 10px 110px
+			min-height: 180px
+		+r(767)
+			padding-left: 120px
+		.cart__col
+			+r(991)
+				float: none
+				display: block
+				padding: 0
+		.cart__price
+			+r(991)
+				display: none
+				
 	&__col
 		padding: 20px 40px
 		position: relative
+		+r(991)
+			position: static
+		+r(767)
+			padding: 0
 	&__body
 		margin-bottom: 25px
+		+r(991)
+			padding: 10px 0
+			background-color: #f5f5f5
+		+r(767)
+			margin: 0 -20px 25px
+		.cart__qua
+			.label
+				font-size: 14px
+				display: none
+				+r(991)
+					display: inline-block
+					vertical-align: middle
+					margin-right: 35px
 	&__img,
 	&__info,
 	&__col
@@ -960,6 +1084,10 @@
 		top: 50%
 		padding: 20px
 		transform: translate3d(50%,-50%,0)
+		+r(991)
+			transform: none
+			top: 40px
+			right: 0
 	&__img
 		width: 90px
 		height: 120px
@@ -967,9 +1095,19 @@
 		background-color: $white
 		margin-right: 20px
 		+vertical
+		+r(991)
+			width: 80px
+			height: 160px
+			position: absolute
+			left: 10px
+			top: 10px
+		+r(767)
+			left: 20px
 		img
 			display: inline-block
 			vertical-align: middle
+			max-width: 100%
+			max-height: 100%
 	&__name
 		font-size: $text-sm
 		font-weight: 700
@@ -980,21 +1118,33 @@
 		letter-spacing: .025em
 		font-size: $text-sm
 		color: #9ea2a8
+		+r(991)
+			margin-bottom: 20px
 	&__value
 		font-size: $text-sm
 		font-weight: 700
 		letter-spacing: .01em
+		+r(991)
+			color: $pink
 	&__select
 		width: 120px
-		background-color: $white
-		font-size: $text-sm
-		letter-spacing: .025em
-		padding: 5px 15px 6px 12px
-		text-align: left
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		+r(991)
+			width: 65px
+		.select2-container--default .select2-selection--single
+			background-color: $white
+			font-size: $text-sm
+			letter-spacing: .025em
+			text-align: left
 	&__total,
 	&__label,
 	&__number
 		padding: 10px 40px
+	&__row
+		+r(767)
+			margin-bottom: 10px
 	&__price,
 	&__amount,
 	&__total,
@@ -1002,12 +1152,22 @@
 		width: 13%
 		padding-left: 20px
 		text-align: right
+		+r(991)
+			text-align: left
+			width: 100%
 	&__qua,
 	&__label
 		width: 18.6%
+		+r(991)
+			width: 100%
+	&__label
+		+r(991)
+			width: 50%
 	&__product
 		width: 55.4%
 		padding-right: 60px
+		+r(991)
+			width: 100%
 	&__number,
 	&__label
 		font-size: $text-sm
@@ -1020,6 +1180,11 @@
 		color: $pink
 		padding-left: 0
 		white-space: nowrap
+		+r(1119)
+			width: 30%
+	&__number
+		+r(1119)
+			width: 30%
 	&__label_bottom,
 	&__totl_bottom
 		vertical-align: bottom
@@ -1028,16 +1193,36 @@
 		color: #818181
 	&__result
 		margin-bottom: 65px
+		+r(991)
+			margin-bottom: 20px
+		.cart__number,
+		.cart__label,
+		.cart__total
+			+r(991)
+				width: 50%
+		.cart__number,
+		.cart__total
+			+r(991)
+				text-align: right
+		.cart__label
+			+r(991)
+				text-align: left
 	&__result,
 	&__footer
 		text-align: right
 	&__scroll
 		overflow: auto
 		height: 320px
-		+r(1119)
-			height: auto
+		position: relative
+		+r(991)
+			height: 360px
+	&__qua
+		+r(991)
+			margin-bottom: 20px
 	.cart__img ~ .cart__info
 		max-width: 170px
+		+r(991)
+			max-width: 100%
 
 // steps
 .steps
