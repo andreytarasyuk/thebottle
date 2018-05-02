@@ -10,6 +10,14 @@ $(document).ready(function() {
 			scrollTop: $(anchor.attr('href')).offset().top
 		}, 1000);
 	});
+	$(window).scroll(function() {
+		if($(this).scrollTop() != 0) {
+			$('.js-btn-top').fadeIn();
+		} else {
+			$('.js-btn-top').fadeOut();
+		}
+
+	});
 	// transparent input, etx
 	$('input, textarea').each(function(){
 		var placeholder = $(this).attr('placeholder');
@@ -27,6 +35,8 @@ $(document).ready(function() {
 		draggable: false,
 		fade: true,
 		dots: true,
+		autoplay: true,
+		speed: 1000,
 		appendDots:$('.js-slick-dots'),
 		arrows: false
 	});
@@ -60,7 +70,8 @@ $(document).ready(function() {
 		{
 			breakpoint: 1120,
 			settings: {
-				dots: true
+				dots: true,
+				asNavFor: null
 			}
 		}
 		]
@@ -71,7 +82,16 @@ $(document).ready(function() {
 		vertical: true,
 		focusOnSelect: true,
 		arrows: false,
-		asNavFor: '.js-slider-for'
+		asNavFor: '.js-slider-for',
+		settings: 'slick',
+		responsive: [
+		{
+			breakpoint: 1120,
+			settings: {
+				asNavFor: null
+			}
+		}
+		]
 	});
 
 	// accordion
@@ -95,6 +115,7 @@ $(document).ready(function() {
 	// filter
 	$('.js-filter-btn').click(function(e) {
 		e.preventDefault();
+		$(this).toggleClass('is-active')
 		$('.js-filter-item').slideToggle();
 	});
 	// popup
@@ -254,7 +275,8 @@ $(document).ready(function() {
 	$('.js-search-btn').click(function(){
 		$('.js-search-input').val('');
 	});
-
+	// scrollbar
+	jQuery('.scrollbar').scrollbar();
 });
 $(document).mouseup(function (e) {
 	let container = $('.js-search-modal, .autocomplete-suggestions');

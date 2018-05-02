@@ -11,13 +11,13 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 	<!-- Libs stylesheet -->
-	<link rel="stylesheet" media="all" href="css/perfect-scrollbar.css">
 	<link rel="stylesheet" media="all" href="css/select2.min.css">
 	<link rel="stylesheet" media="all" href="css/input.css">
+	<link rel="stylesheet" media="all" href="css/jquery.scrollbar.css">
 	<link rel="stylesheet" media="all" href="css/style.min.css">
 </head>
 
-<body>
+<body class="js-body">
 	<div class="out">
 		<!-- header BEGIN -->
 <header class="header js-accordion">
@@ -243,10 +243,10 @@
 			<!-- reviews END -->
 		</div>
 		<!-- about END -->
-
-		
-
-<!-- popup BEIGN -->
+		<!-- btn-top BEGIN -->
+		<a href=".js-body" class="btn-top js-scroll-to js-btn-top"><i class="icon icon-arrow-top"></i></a>
+		<!-- btn-top END -->
+		<!-- popup BEIGN -->
 <div class="popup popup-aside js-modal" data-modal="basket">
 	<div class="popup__content js-modal-prevent">
 		<div class="basket">
@@ -271,7 +271,6 @@
 									<select class="select js-select" style="width: 100%">
 										<option value="1">1</option>
 										<option value="2">2</option>
-										<option value="3">3</option>
 									</select>
 								</div>
 							</div>
@@ -291,7 +290,6 @@
 									<select class="select js-select" style="width: 100%">
 										<option>1</option>
 										<option>2</option>
-										<option>3</option>
 									</select>
 								</div>
 							</div>
@@ -314,6 +312,7 @@
 	</div>
 </div>
 <!-- popup END -->
+
 		<!-- footer BEGIN -->
 <footer class="footer">
 	<div class="inner">
@@ -330,10 +329,10 @@
 					<div class="sm-item">
 						<div class="sm-item__title">категории</div>
 						<ul class="sm-item__list">
-							<li><a href="#">Крепкие напитки</a></li>
-							<li><a href="#">Ликеры</a></li>
-							<li><a href="#">Вина и игристые вина</a></li>
-							<li><a href="#">Вермуты</a></li>
+							<li><a href="category.html">Крепкие напитки</a></li>
+							<li><a href="subcategory.html">Ликеры</a></li>
+							<li><a href="cart.html">Вина и игристые вина</a></li>
+							<li><a href="card.html">Вермуты</a></li>
 						</ul>
 					</div>
 				</div>
@@ -341,10 +340,10 @@
 					<div class="sm-item">
 						<div class="sm-item__title">информация</div>
 						<ul class="sm-item__list">
-							<li><a href="#">О магазине</a></li>
-							<li><a href="#">Доставка и оплата</a></li>
-							<li><a href="#">Условия работы</a></li>
-							<li><a href="#">Контакты</a></li>
+							<li><a href="about.html">О магазине</a></li>
+							<li><a href="delivery.html">Доставка и оплата</a></li>
+							<li><a href="ordering.html">Условия работы</a></li>
+							<li><a href="contacts.html">Контакты</a></li>
 						</ul>
 					</div>
 				</div>
@@ -386,9 +385,10 @@
 
 	<!-- script begin -->
 	<script src="js/vendor/jquery-3.1.1.min.js"></script>
-	<script src="js/vendor/slick.min.js"></script>
-	<script src="js/vendor/jquery.autocomplete.min.js"></script>
+	<script src="js/vendor/jquery.scrollbar.min.js"></script>
 	<script src="js/vendor/select2.min.js"></script>
+	<script src="js/vendor/jquery.autocomplete.min.js"></script>
+	<script src="js/vendor/slick.min.js"></script>
 	<script src="js/app.js"></script>
 	<!-- script end -->
 

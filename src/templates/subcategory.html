@@ -4,7 +4,7 @@ title: subcategory
 <!doctype html>
 <html lang="ru-Ru">
 {% include "partials/_head.html" %}
-<body>
+<body class="js-body">
 	<div class="out">
 		{% include "partials/_header.html" %}
 
@@ -46,160 +46,162 @@ title: subcategory
 							<div class="aside__wrapper js-modal-prevent">
 								<div class="aside__title">Выбрать виски <a href="#" class="aside__btn js-modal-control" data-target="filters"><i class="icon icon-close"></i></a></div>
 								<div class="aside__body">
-									<div class="aside__scroll">
-										<div class="filter js-accordion is-active">
-											<div class="filter__title"><a href="#" class="js-accordion-btn">Объем</a></div>
-											<div class="filter__checkboxes js-accordion-item">
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount">
-														<span class="checkbox__text">Все объемы</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount">
-														<span class="checkbox__text">0.5 л</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount">
-														<span class="checkbox__text">0.75 л</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount">
-														<span class="checkbox__text">1 л</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__btn">
-													<a href="#">
-														<span class="filter__icon"></span>
-														<span class="filter__text">Ещё</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class="filter js-accordion is-active">
-											<div class="filter__title"><a href="#" class="js-accordion-btn">вкус</a></div>
-											<div class="filter__checkboxes js-accordion-item">
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount1">
-														<span class="checkbox__text">Все вкусы</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount1">
-														<span class="checkbox__text">Вишня<span>12</span></span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount1">
-														<span class="checkbox__text">Шоколад</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount1">
-														<span class="checkbox__text">Яблоко</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__btn">
-													<a href="#">
-														<span class="filter__icon"></span>
-														<span class="filter__text">Ещё</span>
-													</a>
+									<div class="aside__scroll scrollbar-aside">
+										<div class="aside__content">
+											<div class="filter js-accordion is-active">
+												<div class="filter__title"><a href="#" class="js-accordion-btn">Объем</a></div>
+												<div class="filter__checkboxes js-accordion-item">
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount">
+															<span class="checkbox__text">Все объемы</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount">
+															<span class="checkbox__text">0.5 л</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount">
+															<span class="checkbox__text">0.75 л</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount">
+															<span class="checkbox__text">1 л</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__btn">
+														<a href="#">
+															<span class="filter__icon"></span>
+															<span class="filter__text">Ещё</span>
+														</a>
+													</div>
 												</div>
 											</div>
-										</div>
-										<div class="filter js-accordion is-active">
-											<div class="filter__title"><a href="#" class="js-accordion-btn">тип</a></div>
-											<div class="filter__checkboxes js-accordion-item">
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount2">
-														<span class="checkbox__text">Любой тип виски</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount2">
-														<span class="checkbox__text">Односолодовый</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount2">
-														<span class="checkbox__text">Купажированный</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount2">
-														<span class="checkbox__text">Бурбон</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__btn">
-													<a href="#">
-														<span class="filter__icon"></span>
-														<span class="filter__text">Ещё</span>
-													</a>
+											<div class="filter js-accordion is-active">
+												<div class="filter__title"><a href="#" class="js-accordion-btn">вкус</a></div>
+												<div class="filter__checkboxes js-accordion-item">
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount1">
+															<span class="checkbox__text">Все вкусы</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount1">
+															<span class="checkbox__text">Вишня<span>12</span></span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount1">
+															<span class="checkbox__text">Шоколад</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount1">
+															<span class="checkbox__text">Яблоко</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__btn">
+														<a href="#">
+															<span class="filter__icon"></span>
+															<span class="filter__text">Ещё</span>
+														</a>
+													</div>
 												</div>
 											</div>
-										</div>
-										<div class="filter js-accordion">
-											<div class="filter__title"><a href="#" class="js-accordion-btn">сочетание</a></div>
-											<div class="filter__checkboxes js-accordion-item">
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount2">
-														<span class="checkbox__text">Любой тип виски</span>
-														<span class="checkbox__icon"></span>
-													</label>
+											<div class="filter js-accordion is-active">
+												<div class="filter__title"><a href="#" class="js-accordion-btn">тип</a></div>
+												<div class="filter__checkboxes js-accordion-item">
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount2">
+															<span class="checkbox__text">Любой тип виски</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount2">
+															<span class="checkbox__text">Односолодовый</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount2">
+															<span class="checkbox__text">Купажированный</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount2">
+															<span class="checkbox__text">Бурбон</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__btn">
+														<a href="#">
+															<span class="filter__icon"></span>
+															<span class="filter__text">Ещё</span>
+														</a>
+													</div>
 												</div>
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount2">
-														<span class="checkbox__text">Односолодовый</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount2">
-														<span class="checkbox__text">Купажированный</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__item">
-													<label class="checkbox">
-														<input type="radio" name="amount2">
-														<span class="checkbox__text">Бурбон</span>
-														<span class="checkbox__icon"></span>
-													</label>
-												</div>
-												<div class="filter__btn">
-													<a href="#">
-														<span class="filter__icon"></span>
-														<span class="filter__text">Ещё</span>
-													</a>
+											</div>
+											<div class="filter js-accordion">
+												<div class="filter__title"><a href="#" class="js-accordion-btn">сочетание</a></div>
+												<div class="filter__checkboxes js-accordion-item">
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount2">
+															<span class="checkbox__text">Любой тип виски</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount2">
+															<span class="checkbox__text">Односолодовый</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount2">
+															<span class="checkbox__text">Купажированный</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__item">
+														<label class="checkbox">
+															<input type="radio" name="amount2">
+															<span class="checkbox__text">Бурбон</span>
+															<span class="checkbox__icon"></span>
+														</label>
+													</div>
+													<div class="filter__btn">
+														<a href="#">
+															<span class="filter__icon"></span>
+															<span class="filter__text">Ещё</span>
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -531,6 +533,9 @@ title: subcategory
 				</div>
 			</div>
 		</div>
+		<!-- btn-top BEGIN -->
+		<a href=".js-body" class="btn-top js-scroll-to js-btn-top"><i class="icon icon-arrow-top"></i></a>
+		<!-- btn-top END -->
 		<!-- subcategory END -->
 		{% include "partials/_basket-modal.html" %}
 		{% include "partials/_footer.html" %}
@@ -538,10 +543,14 @@ title: subcategory
 
 	<!-- script begin -->
 	<script src="js/vendor/jquery-3.1.1.min.js"></script>
-	<script src="js/vendor/slick.min.js"></script>
+	<script src="js/vendor/jquery.scrollbar.min.js"></script>
 	<script src="js/vendor/select2.min.js"></script>
 	<script src="js/vendor/jquery.autocomplete.min.js"></script>
+	<script src="js/vendor/slick.min.js"></script>
 	<script src="js/app.js"></script>
+	<script>
+		const psAside = new PerfectScrollbar('.scrollbar-aside');
+	</script>
 	<!-- script end -->
 
 </body>
