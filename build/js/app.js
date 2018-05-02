@@ -71,7 +71,13 @@ $(document).ready(function() {
 		vertical: true,
 		focusOnSelect: true,
 		arrows: false,
-		asNavFor: '.js-slider-for'
+		asNavFor: '.js-slider-for',
+		responsive: [
+		{
+			breakpoint: 992,
+			settings: 'unslick'
+		}
+		]
 	});
 
 	// accordion

@@ -286,8 +286,8 @@ input[type="checkbox"], input[type="radio"] { display: none; }
 
 .icon { display: inline-block; }
 .icon-login { background-image: url(../img/sprite.png); background-position: -51px -150px; width: 16px; height: 20px; }
-.icon-search { background-image: url(../img/sprite.png); background-position: -177px -150px; width: 16px; height: 16px; }
-.icon-search-white { background-image: url(../img/sprite.png); background-position: -93px -150px; width: 16px; height: 16px; }
+.icon-search { background-image: url(../img/sprite.png); background-position: -156px -150px; width: 16px; height: 16px; }
+.icon-search-white { background-image: url(../img/sprite.png); background-position: -135px -150px; width: 16px; height: 16px; }
 .icon-menu { background-image: url(../img/sprite.png); background-position: 0px -175px; width: 14px; height: 10px; }
 .icon-basket { background-image: url(../img/sprite.png); background-position: -72px -150px; width: 16px; height: 20px; }
 .icon-hearth { background-image: url(../img/sprite.png); background-position: -198px -150px; width: 16px; height: 14px; }
@@ -297,12 +297,12 @@ input[type="checkbox"], input[type="radio"] { display: none; }
 .icon-up { background-image: url(../img/sprite.png); background-position: -240px -150px; width: 6px; height: 12px; }
 .icon-input-arrow { background-image: url(../img/sprite.png); background-position: -34px -175px; width: 12px; height: 6px; }
 .icon-facebook { background-image: url(../img/sprite.png); background-position: -114px -150px; width: 16px; height: 16px; }
-.icon-instagram { background-image: url(../img/sprite.png); background-position: -156px -150px; width: 16px; height: 16px; }
+.icon-instagram { background-image: url(../img/sprite.png); background-position: -93px -150px; width: 16px; height: 16px; }
 .icon-wine { background-image: url(../img/sprite.png); background-position: -199px -75px; width: 50px; height: 70px; }
-.icon-vermouth { background-image: url(../img/sprite.png); background-position: -121px -75px; width: 55px; height: 70px; }
+.icon-vermouth { background-image: url(../img/sprite.png); background-position: -61px -75px; width: 55px; height: 70px; }
 .icon-alcohol { background-image: url(../img/sprite.png); background-position: -138px 0px; width: 56px; height: 70px; }
-.icon-liqueurs { background-image: url(../img/sprite.png); background-position: -69px 0px; width: 64px; height: 70px; }
-.icon-close { background-image: url(../img/sprite.png); background-position: -135px -150px; width: 16px; height: 16px; }
+.icon-liqueurs { background-image: url(../img/sprite.png); background-position: 0px 0px; width: 64px; height: 70px; }
+.icon-close { background-image: url(../img/sprite.png); background-position: -177px -150px; width: 16px; height: 16px; }
 .icon-close-gray { background-image: url(../img/sprite.png); background-position: -19px -175px; width: 10px; height: 10px; }
 .icon-arrow-top { background-image: url(../img/sprite.png); background-position: 0px -190px; width: 6px; height: 12px; }
 .icon-tab-arrow { background-image: url(../img/sprite.png); background-position: -219px -150px; width: 16px; height: 12px; }
@@ -398,9 +398,9 @@ input[type="checkbox"], input[type="radio"] { display: none; }
 .simple-item { position: relative; cursor: pointer; padding: 20px 0; }
 .simple-item:hover .simple-item__title span { color: #b30941; }
 .simple-item:hover .icon-alcohol { background-image: url(../img/sprite.png); background-position: 0px -75px; width: 56px; height: 70px; }
-.simple-item:hover .icon-liqueurs { background-image: url(../img/sprite.png); background-position: 0px 0px; width: 64px; height: 70px; }
+.simple-item:hover .icon-liqueurs { background-image: url(../img/sprite.png); background-position: -69px 0px; width: 64px; height: 70px; }
 .simple-item:hover .icon-wine { background-image: url(../img/sprite.png); background-position: -199px 0px; width: 50px; height: 70px; }
-.simple-item:hover .icon-vermouth { background-image: url(../img/sprite.png); background-position: -61px -75px; width: 55px; height: 70px; }
+.simple-item:hover .icon-vermouth { background-image: url(../img/sprite.png); background-position: -121px -75px; width: 55px; height: 70px; }
 .simple-item:hover .simple-item__dropdown { visibility: visible; opacity: 1; }
 .simple-item__icon { height: 70px; }
 .simple-item__title { font-size: 0; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
@@ -693,7 +693,7 @@ input[type="checkbox"], input[type="radio"] { display: none; }
  .basket__bottom{ padding: 0 20px; }
  .basket__scroll{ padding: 40px 0 160px; }
  .basket__item{ padding: 0 20px; }
- .case__nav{ display: none; }
+ .case__nav{ opacity: 0; visibility: hidden; z-index: -1; }
  .case__for{ padding: 0; }
  .cart__total{ width: 30%; }
  .cart__number{ width: 30%; }
