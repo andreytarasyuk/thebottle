@@ -13,6 +13,7 @@
 	<!-- Libs stylesheet -->
 	<link rel="stylesheet" media="all" href="css/perfect-scrollbar.css">
 	<link rel="stylesheet" media="all" href="css/select2.min.css">
+	<link rel="stylesheet" media="all" href="css/input.css">
 	<link rel="stylesheet" media="all" href="css/style.min.css">
 </head>
 
@@ -20,11 +21,11 @@
 	<div class="out">
 		<!-- header BEGIN -->
 <header class="header js-accordion">
-	<div class="inner">
-		<div class="header__wrapper">
+	<div class="header__wrapper">
+		<div class="inner">
 			<div class="header__left">
 				<a href="#" class="header__btn btn_menu js-accordion-btn"><i class="icon icon-menu"></i></a>
-				<a href="#" class="header__btn btn_search"><i class="icon icon-search"></i></a>
+				<a href="#" class="header__btn btn_search js-search-open"><i class="icon icon-search"></i></a>
 			</div>
 			<a href="index.html" class="logo header__logo"><img src="img/logo.png" alt="THEBOTTLE"></a>
 			<div class="header__right">
@@ -37,8 +38,19 @@
 				</a>
 			</div>
 		</div>
+		<div class="search header__search js-search-modal">
+			<div class="inner">
+				<form action="/" class="search__form">
+					<div class="search__wrapper">
+						<input type="text" class="search__input js-autocomplete js-search-input" placeholder="Поиск по каталогу">
+						<a href="#" class="search__close js-search-btn"><i class="icon icon-close-gray"></i></a>
+					</div>
+					<button class="btn btn_small search__btn">найти <i class="icon icon-search-white"></i></button>
+				</form>
+			</div>
+		</div>
 	</div>
-	<div class="menu header__menu js-accordion-item">
+	<nav class="menu header__menu js-accordion-item">
 		<div class="inner">
 			<div class="row">
 				<div class="col col-3 col-sm-6 col-xxs-12">
@@ -119,7 +131,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</nav>
 </header>
 <!-- header END -->
 
@@ -451,7 +463,76 @@
 			</div>
 		</div>
 		<!-- popular END -->
+		
 
+<!-- popup BEIGN -->
+<div class="popup popup-aside js-modal" data-modal="basket">
+	<div class="popup__content js-modal-prevent">
+		<div class="basket">
+			<div class="basket__title">
+				<p>корзина (<span>2</span>)</p>
+				<a href="#" class="basket__close js-modal-control" data-target="basket">
+					<i class="icon icon-close"></i>
+				</a>
+			</div>
+			<div class="basket__scroll">
+				<div class="basket__item scrollbar">
+					<div class="row-item">
+						<div class="row-item__img">
+							<img src="img/basket-img-00.png" alt="img">
+						</div>
+						<div class="row-item__content">
+							<div class="row-item__title">Johnnie Walker Red Rye Finish, 1 л</div>
+							<div class="row-item__category">Виски</div>
+							<div class="row-item__quantity">
+								<span class="label">Количество:</span>
+								<div class="row-item__select">
+									<select class="select js-select" style="width: 100%">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
+								</div>
+							</div>
+							<div class="row-item__price"><span>750</span> грн</div>
+						</div>
+					</div>
+					<div class="row-item">
+						<div class="row-item__img">
+							<img src="img/basket-img-01.png" alt="img">
+						</div>
+						<div class="row-item__content">
+							<div class="row-item__title">Johnnie Walker Red Rye Finish, 1 л</div>
+							<div class="row-item__category">Виски</div>
+							<div class="row-item__quantity">
+								<span class="label">Количество:</span>
+								<div class="row-item__select">
+									<select class="select js-select" style="width: 100%">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+									</select>
+								</div>
+							</div>
+							<div class="row-item__price"><span>750</span> грн</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="basket__bottom">
+				<div class="basket__price">
+					<div class="basket__price_left"><span>итого:</span></div>
+					<div class="basket__price_right"><span>3 250 грн</span></div>
+				</div>
+				<div class="basket__btn">
+					<a href="#" class="btn btn_block btn_large">оформить заказ</a>
+					<a href="#" class="btn btn_block btn_large btn_transparent">продолжить покупки</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- popup END -->
 		<!-- footer BEGIN -->
 <footer class="footer">
 	<div class="inner">
@@ -525,6 +606,7 @@
 	<!-- script begin -->
 	<script src="js/vendor/jquery-3.1.1.min.js"></script>
 	<script src="js/vendor/slick.min.js"></script>
+	<script src="js/vendor/jquery.autocomplete.min.js"></script>
 	<script src="js/app.js"></script>
 	<!-- script end -->
 

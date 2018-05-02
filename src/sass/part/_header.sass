@@ -1,6 +1,7 @@
 .header
 	background-color: $white
 	box-shadow: 0 0 10px rgba($black-lighten, .1)
+	position: relative
 	&__wrapper
 		padding: 24px 0
 		height: 80px
@@ -25,5 +26,17 @@
 		transform: translate(-50%, -50%)
 	&__menu
 		display: none
-		
-	
+	&__search
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		visibility: hidden
+		transition: opacity .3s linear, visibility .3s linear
+		&.is-open
+			opacity: 1
+			visibility: visible

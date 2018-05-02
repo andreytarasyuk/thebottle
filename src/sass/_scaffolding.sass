@@ -222,6 +222,8 @@ h4
 		max-width: 206px
 		display: inline-block
 		width: 100%
+		form
+			position: relative
 		.input
 			border: none
 			border-bottom: 1px solid $black-lighten
@@ -527,6 +529,8 @@ input[type="radio"]
 			width: 100%
 			font-size: $text-reg
 			border: 1px solid #818181
+		.select2-container--default .select2-selection--single .select2-selection__arrow
+			width: 40px
 .select2-container--default .select2-selection--single
 	background-color: #f5f5f5
 	border: none
@@ -536,6 +540,8 @@ input[type="radio"]
 	outline: none
 	cursor: pointer
 	border-radius: 2px
+.select2-container .select2-selection--single .select2-selection__rendered
+	padding-left: 0
 .select2-container--default .select2-selection--single .select2-selection__arrow b
 	border-color: $black-lighten transparent transparent transparent
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
@@ -700,11 +706,11 @@ input[type="radio"]
 			right: 0
 		+r(991)
 			display: block
-		&.hidden 
+		&.hidden
 			display: none
 			+r(991)
 				display: none
-		.icon 
+		.icon
 			vertical-align: middle
 	&__item
 		display: none
@@ -777,3 +783,84 @@ input[type="radio"]
 // scrollbar
 .ps__thumb-y
 	background-color: $black-lighten
+
+// search
+.search
+	background-color: $white
+	&__form
+		display: inline-block
+		width: 100%
+		padding: 19px 0 19px 70px
+		+clr
+		+r(991)
+			padding: 15px 0 15px 50px
+	&__btn
+		float: right
+		margin-top: 1px
+		+r(991)
+			font-size: 0
+			+vertical
+			padding: 0
+		&.btn_small
+			max-width: 160px
+			+r(991)
+				max-width: 40px
+				height: 40px
+			.icon
+				display: none
+				+r(991)
+					display: inline-block
+					vertical-align: middle
+					margin-right: 0
+	&__wrapper
+		width: 80%
+		display: inline-block
+		position: relative
+		+r(991)
+			width: calc(100% - 50px)
+	&__input
+		box-shadow: 0 0 6px 0 rgba($black-lighten, .25)
+		height: 42px
+		width: 100%
+		border-radius: 4px
+		border: 1px solid #e5e6e6
+		padding: 2px 20px 5px
+		color: #000714
+		font-size: $text-reg
+		margin: 0
+		outline: none
+		+placeholder(#818181)
+		+font-family($exo)
+		letter-spacing: .025
+		padding-right: 40px
+	&__close
+		height: 100%
+		width: 40px
+		text-align: center
+		position: absolute
+		right: 0
+		+vertical
+		top: 0
+		.icon
+			vertical-align: middle
+
+// autocomplete
+.autocomplete
+	&-suggestions
+		box-shadow: 0 0 6px 0 rgba($black-lighten, .25)
+		border: none
+		border-radius: 4px
+		margin-top: -1px
+	&-suggestion
+		font-size: $text-sm
+		color: $black-lighten
+		padding: 15px 20px
+		+font-family($exo)
+		cursor: pointer
+		transition: color .3s linear
+		&:not(:last-child)
+			border-bottom: 1px solid #9ea2a8
+		&:hover
+			color: $pink
+			strong
+				color: $pink

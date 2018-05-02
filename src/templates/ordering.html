@@ -330,8 +330,8 @@ title: ordering
 		<!-- popup BEGIN -->
 		<div class="popup js-modal" data-modal="comment">
 			<div class="inner popup__inner popup__inner_md">
-				<div class="popup__content popup__content_center">
-					<a href="#" class="btn-close js-modal-control" data-target"comment"><i class="icon icon-close"></i></a>
+				<div class="popup__content popup__content_center js-modal-prevent">
+					<a href="#" class="btn-close js-modal-control" data-target="comment"><i class="icon icon-close"></i></a>
 					<div class="popup__title">Спасибо за заказ!</div>
 					<p>Все наши служны уже работают над Вашим заказом. <br /> В ближайшее время с Вами свяжется менеджер, чтобы обсудить все детали покупки. Отличного Вам настроения!
 					</p>
@@ -340,7 +340,7 @@ title: ordering
 			</div>
 		</div>
 		<!-- popup END -->
-
+		{% include "partials/_basket-modal.html" %}
 		{% include "partials/_footer.html" %}
 	</div>
 
@@ -348,6 +348,7 @@ title: ordering
 	<script src="js/vendor/jquery-3.1.1.min.js"></script>
 	<script src="js/vendor/slick.min.js"></script>
 	<script src="js/vendor/perfect-scrollbar.min.js"></script>
+	<script src="js/vendor/jquery.autocomplete.min.js"></script>
 	<script src="js/vendor/select2.min.js"></script>
 	<script src="js/app.js"></script>
 	<script>

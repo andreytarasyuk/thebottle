@@ -61,7 +61,7 @@ $(document).ready(function() {
 			breakpoint: 1120,
 			settings: {
 				dots: true
-			} 
+			}
 		}
 		]
 	});
@@ -90,7 +90,7 @@ $(document).ready(function() {
 			current.toggleClass(active);
 			currentBtn.toggleClass(active);
 			currentItem.slideToggle();
-		});		
+		});
 	});
 	// filter
 	$('.js-filter-btn').click(function(e) {
@@ -111,15 +111,13 @@ $(document).ready(function() {
 
 		modal.on('click', e => {
 			if ($(e.target).closest(prevent).length) return;
-			modal.removeClass(OPEN);			
+			modal.removeClass(OPEN);
 		});
 	});
 	// select2
 	const select = $('.js-select');
 	const selectInModal = select.filter((i, s) => !!$(s).closest('.js-modal').length);
 	const selectNotInModal = select.not(selectInModal);
-	console.log(selectNotInModal);
-	console.log(selectInModal);
 
 	selectInModal.each((i, s) => {
 		s = $(s);
@@ -139,21 +137,21 @@ $(document).ready(function() {
 		const HIDDEN = 'hidden';
 
 		controls
-			.add(contents)
-			.removeClass(ACTIVE);
+		.add(contents)
+		.removeClass(ACTIVE);
 		control
-			.add(content)
-			.addClass(ACTIVE);
+		.add(content)
+		.addClass(ACTIVE);
 
 		if (i <= 0) prev.addClass(HIDDEN);
 		else prev.removeClass(HIDDEN);
 
 		if (i >= controls.length - 1) next.addClass(HIDDEN)
-		else next.removeClass(HIDDEN);
+			else next.removeClass(HIDDEN);
 	};
 
 	$('.js-tabs').each((i, container) => {
-		
+
 		container = $(container);
 		const controls = container.find('.js-tabs-control');
 		const contents = container.find('.js-tabs-content');
@@ -176,20 +174,20 @@ $(document).ready(function() {
 				next
 			});
 
-			control.click(e => {
-				e.preventDefault();
-				if (control.hasClass(ACTIVE)) return;
-				showCurrentTab({
-					controls,
-					control,
-					contents,
-					content,
-					i,
-					prev,
-					next
+				control.click(e => {
+					e.preventDefault();
+					if (control.hasClass(ACTIVE)) return;
+					showCurrentTab({
+						controls,
+						control,
+						contents,
+						content,
+						i,
+						prev,
+						next
+					});
 				});
 			});
-		});
 
 		prev.click(e => {
 			e.preventDefault();
@@ -239,6 +237,30 @@ $(document).ready(function() {
 
 	});
 
+	// autocomplete
+	let countries = [
+	{ value: 'Andorra', data: 'AD' },
+	{ value: 'Zimbabwe', data: 'ZZ' }
+	];
+
+	$('.js-autocomplete').autocomplete({
+		lookup: countries
+	});
+	// search
+	$('.js-search-open').click(function (e) {
+		e.preventDefault();
+		$('.js-search-modal').addClass(OPEN);
+	});
+	$('.js-search-btn').click(function(){
+		$('.js-search-input').val('');
+	});
+
+});
+$(document).mouseup(function (e) {
+	let container = $('.js-search-modal, .autocomplete-suggestions');
+	if (container.has(e.target).length === 0){
+		container.removeClass('is-open');
+	}
 });
 
 
