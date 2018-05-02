@@ -285,24 +285,24 @@ input[type="checkbox"], input[type="radio"] { display: none; }
 .autocomplete-suggestion:hover strong { color: #b30941; }
 
 .icon { display: inline-block; }
-.icon-login { background-image: url(../img/sprite.png); background-position: -51px -150px; width: 16px; height: 20px; }
-.icon-search { background-image: url(../img/sprite.png); background-position: -156px -150px; width: 16px; height: 16px; }
-.icon-search-white { background-image: url(../img/sprite.png); background-position: -135px -150px; width: 16px; height: 16px; }
+.icon-login { background-image: url(../img/sprite.png); background-position: -72px -150px; width: 16px; height: 20px; }
+.icon-search { background-image: url(../img/sprite.png); background-position: -135px -150px; width: 16px; height: 16px; }
+.icon-search-white { background-image: url(../img/sprite.png); background-position: -93px -150px; width: 16px; height: 16px; }
 .icon-menu { background-image: url(../img/sprite.png); background-position: 0px -175px; width: 14px; height: 10px; }
-.icon-basket { background-image: url(../img/sprite.png); background-position: -72px -150px; width: 16px; height: 20px; }
+.icon-basket { background-image: url(../img/sprite.png); background-position: -51px -150px; width: 16px; height: 20px; }
 .icon-hearth { background-image: url(../img/sprite.png); background-position: -198px -150px; width: 16px; height: 14px; }
 .icon-star { background-image: url(../img/sprite.png); background-position: -181px -128px; width: 10px; height: 10px; }
 .icon-star-big { background-image: url(../img/sprite.png); background-position: -26px -150px; width: 20px; height: 20px; }
 .icon-mouse { background-image: url(../img/sprite.png); background-position: -181px -75px; width: 10px; height: 16px; }
 .icon-up { background-image: url(../img/sprite.png); background-position: -240px -150px; width: 6px; height: 12px; }
 .icon-input-arrow { background-image: url(../img/sprite.png); background-position: -34px -175px; width: 12px; height: 6px; }
-.icon-facebook { background-image: url(../img/sprite.png); background-position: -114px -150px; width: 16px; height: 16px; }
-.icon-instagram { background-image: url(../img/sprite.png); background-position: -93px -150px; width: 16px; height: 16px; }
-.icon-wine { background-image: url(../img/sprite.png); background-position: -199px -75px; width: 50px; height: 70px; }
+.icon-facebook { background-image: url(../img/sprite.png); background-position: -177px -150px; width: 16px; height: 16px; }
+.icon-instagram { background-image: url(../img/sprite.png); background-position: -156px -150px; width: 16px; height: 16px; }
+.icon-wine { background-image: url(../img/sprite.png); background-position: -199px 0px; width: 50px; height: 70px; }
 .icon-vermouth { background-image: url(../img/sprite.png); background-position: -61px -75px; width: 55px; height: 70px; }
 .icon-alcohol { background-image: url(../img/sprite.png); background-position: -138px 0px; width: 56px; height: 70px; }
-.icon-liqueurs { background-image: url(../img/sprite.png); background-position: 0px 0px; width: 64px; height: 70px; }
-.icon-close { background-image: url(../img/sprite.png); background-position: -177px -150px; width: 16px; height: 16px; }
+.icon-liqueurs { background-image: url(../img/sprite.png); background-position: -69px 0px; width: 64px; height: 70px; }
+.icon-close { background-image: url(../img/sprite.png); background-position: -114px -150px; width: 16px; height: 16px; }
 .icon-close-gray { background-image: url(../img/sprite.png); background-position: -19px -175px; width: 10px; height: 10px; }
 .icon-arrow-top { background-image: url(../img/sprite.png); background-position: 0px -190px; width: 6px; height: 12px; }
 .icon-tab-arrow { background-image: url(../img/sprite.png); background-position: -219px -150px; width: 16px; height: 12px; }
@@ -398,8 +398,8 @@ input[type="checkbox"], input[type="radio"] { display: none; }
 .simple-item { position: relative; cursor: pointer; padding: 20px 0; }
 .simple-item:hover .simple-item__title span { color: #b30941; }
 .simple-item:hover .icon-alcohol { background-image: url(../img/sprite.png); background-position: 0px -75px; width: 56px; height: 70px; }
-.simple-item:hover .icon-liqueurs { background-image: url(../img/sprite.png); background-position: -69px 0px; width: 64px; height: 70px; }
-.simple-item:hover .icon-wine { background-image: url(../img/sprite.png); background-position: -199px 0px; width: 50px; height: 70px; }
+.simple-item:hover .icon-liqueurs { background-image: url(../img/sprite.png); background-position: 0px 0px; width: 64px; height: 70px; }
+.simple-item:hover .icon-wine { background-image: url(../img/sprite.png); background-position: -199px -75px; width: 50px; height: 70px; }
 .simple-item:hover .icon-vermouth { background-image: url(../img/sprite.png); background-position: -121px -75px; width: 55px; height: 70px; }
 .simple-item:hover .simple-item__dropdown { visibility: visible; opacity: 1; }
 .simple-item__icon { height: 70px; }
@@ -693,7 +693,7 @@ input[type="checkbox"], input[type="radio"] { display: none; }
  .basket__bottom{ padding: 0 20px; }
  .basket__scroll{ padding: 40px 0 160px; }
  .basket__item{ padding: 0 20px; }
- .case__nav{ opacity: 0; visibility: hidden; z-index: -1; }
+ .case__nav{ display: none; }
  .case__for{ padding: 0; }
  .cart__total{ width: 30%; }
  .cart__number{ width: 30%; }
@@ -709,7 +709,7 @@ input[type="checkbox"], input[type="radio"] { display: none; }
  .col-sm-4{ width: 33.33%; }
  .title{ padding: 50px 0; }
  .menu{ padding: 25px 0; }
- .popup__content{ padding: 60px 40px; }
+ .popup__content{ padding: 60px 20px; }
  .aside{ position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 555; background-color: rgba(0, 0, 0, 0.5); opacity: 0; visibility: hidden; transition: opacity 0.3s linear, visibility 0.3s linear; }
  .aside.is-open{ opacity: 1; visibility: visible; }
  .aside__wrapper{ padding: 0; width: 260px; height: 100%; }
@@ -815,7 +815,8 @@ input[type="checkbox"], input[type="radio"] { display: none; }
  .footer__info{ width: 50%; }
  .footer__social{ width: 50%; }
  .btn_next{ display: none; }
- .btn-top{ position: relative; right: 0; bottom: 0; top: 16px; display: block; margin: 0 auto; } }
+ .btn-top{ position: relative; right: 0; bottom: 0; top: 16px; display: block; margin: 0 auto; }
+ .btn__mobile_small{ font-size: 10px; } }
 @media only screen and (max-width: 768px){
  .reviews__btn{ margin-top: 30px; }
  .review{ margin-bottom: 40px; } }
